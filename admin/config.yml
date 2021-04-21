@@ -15,6 +15,7 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
       - {label: "SubTitle", name: "lead", widget: "string"}
+      - {label: "Descrition", name: "description", widget: "text", default: "max length: 155"}
       - {label: "Publish Date", name: Published", widget: "datetime"}
       - {label: "Time Minutes", name: minutes", widget: "number"}
       - {label: "Tags", name: "tags", widget: "list"}
@@ -32,6 +33,7 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
       - {label: "SubTitle", name: "lead", widget: "string"}
+      - {label: "Descrition", name: "description", widget: "text", default: "max length: 155"}
       - {label: "Publish Date", name: Published", widget: "datetime"}
       - {label: "Time Minutes", name: minutes", widget: "number"}
       - {label: "Tags", name: "tags", widget: "list"}
@@ -46,6 +48,7 @@ collections:
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Descrition", name: "description", widget: "text", default: "max length: 155"}
       - {label: "Published", name: "isPost", widget: "boolean", default: true}
       - {label: "Navigation Icon Awesome", name: "navIcon", widget: "string"}
       - {label: "Add to Navigation", name: " showInNavbar", widget: "boolean", default: true}     
@@ -61,6 +64,7 @@ collections:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Image", name: "image", widget: "image"}
           - {label: "About Me", name: "description", widget: "markdown"}
+          - {label: "Descrition", name: "description", widget: "text", default: "max length: 155"}
           - label: "Socials"
             name: "socials"
             widget: "list"
