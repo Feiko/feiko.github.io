@@ -7,8 +7,18 @@
 	</author>
 	<link rel="self" href="https://feiko.io/" />
 	<rights>Copyright © 2021</rights>
-	<updated>2021-04-21T14:46:36Z</updated>
+	<updated>2021-04-21T15:43:50Z</updated>
 	<subtitle>Feiko's personal site about everything IoT and Tech</subtitle>
+	<entry>
+		<id>/posts/2021-04-18-eerste-blog</id>
+		<title>Eerste Blog</title>
+		<link href="/posts/2021-04-18-eerste-blog" />
+		<link rel="enclosure" type="image" href="/images/uploads/img_4425.jpg" />
+		<updated>2021-04-21T16:56:28Z</updated>
+		<content>&lt;p&gt;dit is een eerste test&lt;/p&gt;
+</content>
+		<summary>Dit is een eerste blog</summary>
+	</entry>
 	<entry>
 		<id>/posts/2021-04-20-functionaliteit-blog</id>
 		<title>functionaliteit blog</title>
@@ -38,15 +48,5 @@ public class main{
 		<content>&lt;p&gt;This is some extra.&lt;/p&gt;
 </content>
 		<summary>Dit is een eerste vlog hoe vind je dit</summary>
-	</entry>
-	<entry>
-		<id>/posts/2021-04-18-eerste-blog</id>
-		<title>Eerste Blog</title>
-		<link href="/posts/2021-04-18-eerste-blog" />
-		<link rel="enclosure" type="image" href="/images/uploads/img_4425.jpg" />
-		<updated>2021-04-21T16:03:42Z</updated>
-		<content>&lt;p&gt;dit is een eerste test&lt;/p&gt;
-</content>
-		<summary>Feiko's personal site about everything IoT and Tech</summary>
 	</entry>
 </feed>
