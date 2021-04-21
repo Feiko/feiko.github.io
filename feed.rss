@@ -6,8 +6,8 @@
 		<description>Feiko's personal site about everything IoT and Tech</description>
 		<copyright>Copyright © 2021</copyright>
 		<managingEditor>Feiko Gorter</managingEditor>
-		<pubDate>Wed, 21 Apr 2021 17:06:17 GMT</pubDate>
-		<lastBuildDate>Wed, 21 Apr 2021 17:06:17 GMT</lastBuildDate>
+		<pubDate>Wed, 21 Apr 2021 17:14:45 GMT</pubDate>
+		<lastBuildDate>Wed, 21 Apr 2021 17:14:45 GMT</lastBuildDate>
 		<item>
 			<title>first vlog</title>
 			<link>/posts/2021-04-20-first-vlog</link>
@@ -43,7 +43,7 @@ public class main{
 		<item>
 			<title>Eerste Blog</title>
 			<link>/posts/2021-04-18-eerste-blog</link>
-			<description>Dit is een eerste blog</description>
+			<description>Dit is een eerste blog2</description>
 			<enclosure url="/images/uploads/img_4425.jpg" length="0" type="image" />
 			<guid isPermaLink="false">/posts/2021-04-18-eerste-blog</guid>
 			<pubDate>Thu, 18 Mar 2021 18:35:15 GMT</pubDate>
