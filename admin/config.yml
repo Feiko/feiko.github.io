@@ -19,7 +19,7 @@ collections:
       - {label: "Time Minutes", name: minutes", widget: "number"}
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Image", name: "image", widget: "image"}
-      - {label: "ImageCredit" name: "ImageCredit": "string"}
+      - {label: "ImageCredit", name: "ImageCredit", widget: "string"}
       - {label: "Thumb Image 1:1", name: "thumbImage", widget: "image"}
       - {label: "Published", name: isPost", widget: "boolean", default: true}
       - {label: "Body", name: "body", widget: "markdown"}
