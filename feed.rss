@@ -6,25 +6,15 @@
 		<description>Feiko's personal site about everything IoT and Tech</description>
 		<copyright>Copyright © 2021</copyright>
 		<managingEditor>Feiko Gorter</managingEditor>
-		<pubDate>Wed, 21 Apr 2021 13:20:29 GMT</pubDate>
-		<lastBuildDate>Wed, 21 Apr 2021 13:20:29 GMT</lastBuildDate>
-		<item>
-			<title>first vlog</title>
-			<link>/posts/2021-04-20-first-vlog</link>
-			<description>Dit is een eerste vlog hoe vind je dit</description>
-			<guid isPermaLink="false">/posts/2021-04-20-first-vlog</guid>
-			<pubDate>Wed, 21 Apr 2021 14:25:45 GMT</pubDate>
-			<content:encoded>&lt;p&gt;This is some extra.&lt;/p&gt;
-</content:encoded>
-			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
-		</item>
+		<pubDate>Wed, 21 Apr 2021 14:46:36 GMT</pubDate>
+		<lastBuildDate>Wed, 21 Apr 2021 14:46:36 GMT</lastBuildDate>
 		<item>
 			<title>functionaliteit blog</title>
 			<link>/posts/2021-04-20-functionaliteit-blog</link>
 			<description>Feiko's personal site about everything IoT and Tech</description>
 			<enclosure url="/images/uploads/img_4425.jpg" length="0" type="image" />
 			<guid isPermaLink="false">/posts/2021-04-20-functionaliteit-blog</guid>
-			<pubDate>Tue, 20 Apr 2021 17:11:42 GMT</pubDate>
+			<pubDate>Wed, 21 Apr 2021 16:03:42 GMT</pubDate>
 			<content:encoded>&lt;p&gt;Dit is een test&lt;/p&gt;
 &lt;pre&gt;&lt;code class="language-csharp"&gt;using system;
 
@@ -41,12 +31,22 @@ public class main{
 			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
 		</item>
 		<item>
+			<title>first vlog</title>
+			<link>/posts/2021-04-20-first-vlog</link>
+			<description>Dit is een eerste vlog hoe vind je dit</description>
+			<guid isPermaLink="false">/posts/2021-04-20-first-vlog</guid>
+			<pubDate>Wed, 21 Apr 2021 16:03:42 GMT</pubDate>
+			<content:encoded>&lt;p&gt;This is some extra.&lt;/p&gt;
+</content:encoded>
+			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
+		</item>
+		<item>
 			<title>Eerste Blog</title>
 			<link>/posts/2021-04-18-eerste-blog</link>
 			<description>Feiko's personal site about everything IoT and Tech</description>
 			<enclosure url="/images/uploads/img_4425.jpg" length="0" type="image" />
 			<guid isPermaLink="false">/posts/2021-04-18-eerste-blog</guid>
-			<pubDate>Sun, 18 Apr 2021 20:36:31 GMT</pubDate>
+			<pubDate>Wed, 21 Apr 2021 16:03:42 GMT</pubDate>
 			<content:encoded>&lt;p&gt;dit is een eerste test&lt;/p&gt;
 </content:encoded>
 			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
