@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+	<channel>
+		<title>Feiko.IO</title>
+		<link>https://feiko.io/</link>
+		<description>Feiko's personal site about everything IoT and Tech</description>
+		<copyright>Copyright © 2021</copyright>
+		<managingEditor>Feiko Gorter</managingEditor>
+		<pubDate>Wed, 21 Apr 2021 11:17:17 GMT</pubDate>
+		<lastBuildDate>Wed, 21 Apr 2021 11:17:17 GMT</lastBuildDate>
+		<item>
+			<title>first vlog</title>
+			<link>/posts/2021-04-20-first-vlog</link>
+			<description>Feiko's personal site about everything IoT and Tech</description>
+			<guid isPermaLink="false">/posts/2021-04-20-first-vlog</guid>
+			<pubDate>Tue, 20 Apr 2021 17:47:47 GMT</pubDate>
+			<content:encoded>&lt;p&gt;This is some extra.&lt;/p&gt;
+</content:encoded>
+			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
+		</item>
+		<item>
+			<title>functionaliteit blog</title>
+			<link>/posts/2021-04-20-functionaliteit-blog</link>
+			<description>Feiko's personal site about everything IoT and Tech</description>
+			<enclosure url="/images/uploads/img_4425.jpg" length="0" type="image" />
+			<guid isPermaLink="false">/posts/2021-04-20-functionaliteit-blog</guid>
+			<pubDate>Tue, 20 Apr 2021 17:11:42 GMT</pubDate>
+			<content:encoded>&lt;p&gt;Dit is een test&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-csharp"&gt;using system;
+
+public class main{
+  public static program(){
+    string bla = &amp;quot;test&amp;quot;
+    Console.Writeline(bla);
+  }
+  
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;?# YouTube hnCmSXCZEpU /?&gt;
+</content:encoded>
+			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
+		</item>
+		<item>
+			<title>Eerste Blog</title>
+			<link>/posts/2021-04-18-eerste-blog</link>
+			<description>Feiko's personal site about everything IoT and Tech</description>
+			<enclosure url="/images/uploads/img_4425.jpg" length="0" type="image" />
+			<guid isPermaLink="false">/posts/2021-04-18-eerste-blog</guid>
+			<pubDate>Sun, 18 Apr 2021 20:36:31 GMT</pubDate>
+			<content:encoded>&lt;p&gt;dit is een eerste test&lt;/p&gt;
+</content:encoded>
+			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
+		</item>
+	</channel>
+</rss>
