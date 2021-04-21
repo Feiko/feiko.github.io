@@ -63,8 +63,7 @@ collections:
         fields:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Image", name: "image", widget: "image"}
-          - {label: "About Me", name: "description", widget: "markdown"}
-          - {label: "Descrition", name: "description", widget: "text", default: "max length: 155"}
+          - {label: "About Me", name: "description", widget: "text"}
           - label: "Socials"
             name: "socials"
             widget: "list"
