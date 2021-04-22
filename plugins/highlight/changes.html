@@ -49,13 +49,13 @@ xmlns:og="http://ogp.me/ns#" lang="en">
 
 
 <header class="header text-center">
-    <h1 class="blog-name pt-lg-4 mb-0" ><a href="/">Feiko.IO</a></h1>
+    <h1 class="blog-name d-inline-flex pt-lg-4"><a href="/">Feiko.IO</a></h1>
 
-    <nav class="navbar navbar-expand-lg navbar-dark" style="z-index:-1;">
-
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+
 
         <div id="navigation" class="collapse navbar-collapse flex-column">
             <div class="profile-section pt-3 pt-lg-0">
@@ -101,11 +101,12 @@ xmlns:og="http://ogp.me/ns#" lang="en">
 
 
     <div class="main-wrapper">
+        <div class="content-wrapper d-flex flex-column min-vh-100">
 
-            <section class="blog-list px-3 py-5 p-md-5">
-                <div class="container">
+                <section class="blog-list px-3 py-5 p-md-5">
+                    <div class="container">
 
-                    <h2 id="version-9.12.0">Version 9.12.0</h2>
+                        <h2 id="version-9.12.0">Version 9.12.0</h2>
 <p>New language:</p>
 <ul>
 <li><em>MikroTik</em> RouterOS Scripting language by <a href="https://github.com/DiVAN1x">Ivan Dementev</a>.</li>
@@ -1193,33 +1194,36 @@ places (like keyword &quot;End&quot; at the end of Delphi classes)</li>
 your comments and question to <a href="http://softwaremaniacs.org/forum/viewforum.php?id=6">highlight.js forum</a>. And don't be afraid
 if you find there some fancy Cyrillic letters -- it's for Russian users too :-)</p>
 
+                    </div>
+                </section>
+
+            <!-- subfooter section -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p class="copyright text-muted m-0">Copyright &#xA9; 2021</p>
+                        <br />
+                        <ul class="list-inline text-center small">
+                                <li class="list-inline-item">
+                                    <a href="/feed.rss"><i class="fa fa-rss"></i> RSS Feed</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="/feed.atom"><i class="fa fa-rss"></i> Atom Feed</a>
+                                </li>
+                        </ul>
+                        <br />
+
+                    </div>
                 </div>
-            </section>
-
-
+            </div>
+        </div>
+        
         <!-- Footer -->
         
 
 
 <footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <p class="copyright text-muted m-0">Copyright &#xA9; 2021</p>
-                <br />
-                <ul class="list-inline text-center small">
-                        <li class="list-inline-item">
-                            <a href="/feed.rss"><i class="fa fa-rss"></i> RSS Feed</a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="/feed.atom"><i class="fa fa-rss"></i> Atom Feed</a>
-                        </li>
-                </ul>
-                <br />
-                
-            </div>
-        </div>
-    </div>
+    
     <div class="footer text-center py-2 theme-bg-dark">
 
         <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
