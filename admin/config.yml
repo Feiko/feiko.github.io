@@ -5,7 +5,7 @@ backend:
   branch: master
   site_domain: feiko.netlify.app
 
-media_folder: "/images/"
+media_folder: "/files/images/"
 
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
