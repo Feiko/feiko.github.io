@@ -3,14 +3,14 @@ backend:
   name: github
   repo: feiko/feiko.io
   branch: master
-  site_domain: feiko.io
+  site_domain: feiko.netlify.app
 
-media_folder: "/input/images/"
+media_folder: "/images/"
 
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI
-    folder: "/input/posts" # The path to the folder where the documents are stored
+    folder: "/blog/posts" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
@@ -28,7 +28,7 @@ collections:
       
   - name: "vlog" # Used in routes, e.g., /admin/collections/blog
     label: "Vlog" # Used in the UI
-    folder: "/input/posts" # The path to the folder where the documents are stored
+    folder: "/vlog/posts" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
@@ -49,16 +49,16 @@ collections:
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Description", name: "description", widget: "text", default: "max length: 155"}
+      - {label: "Description", name: "description", widget: "text", default: "min length: 155, max length: 155"}
       - {label: "Published", name: "isPost", widget: "boolean", default: true}
-      - {label: "Navigation Icon Awesome", name: "navIcon", widget: "string"}
+      - {label: "Navigation Icon Awesome", name: "navIcon", widget: "string", required: false}
       - {label: "Add to Navigation", name: " showInNavbar", widget: "boolean", default: true}     
-      - {label: "Body", name: "body", widget: "markdown"}  
+      - {label: "Body", name: "body", widget: "markdown", required: false}  
   
   - name: "general"
     label: "General"
     files:
-      - file: "/input/header.md"
+      - file: "/input/settings/header.md"
         label: "Header"
         name: "header"
         fields:
