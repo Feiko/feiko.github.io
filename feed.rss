@@ -6,8 +6,8 @@
 		<description>Feiko's personal site about everything IoT and Tech</description>
 		<copyright>Copyright © 2021</copyright>
 		<managingEditor>Feiko Gorter</managingEditor>
-		<pubDate>Thu, 22 Apr 2021 16:13:02 GMT</pubDate>
-		<lastBuildDate>Thu, 22 Apr 2021 16:13:02 GMT</lastBuildDate>
+		<pubDate>Fri, 23 Apr 2021 07:14:05 GMT</pubDate>
+		<lastBuildDate>Fri, 23 Apr 2021 07:14:05 GMT</lastBuildDate>
 		<item>
 			<title>first vlog</title>
 			<link>/posts/2021-04-20-first-vlog</link>
@@ -15,28 +15,6 @@
 			<guid isPermaLink="false">/posts/2021-04-20-first-vlog</guid>
 			<pubDate>Tue, 20 Apr 2021 15:44:40 GMT</pubDate>
 			<content:encoded>&lt;p&gt;This is some extra.&lt;/p&gt;
-</content:encoded>
-			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
-		</item>
-		<item>
-			<title>functionaliteit blog</title>
-			<link>/posts/2021-04-20-functionaliteit-blog</link>
-			<description>Feiko's personal site about everything IoT and Tech</description>
-			<enclosure url="/images/uploads/img_4425.jpg" length="0" type="image" />
-			<guid isPermaLink="false">/posts/2021-04-20-functionaliteit-blog</guid>
-			<pubDate>Tue, 20 Apr 2021 08:53:14 GMT</pubDate>
-			<content:encoded>&lt;p&gt;Dit is een test&lt;/p&gt;
-&lt;pre&gt;&lt;code class="language-csharp"&gt;using system;
-
-public class main{
-  public static program(){
-    string bla = &amp;quot;test&amp;quot;
-    Console.Writeline(bla);
-  }
-  
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;?# YouTube hnCmSXCZEpU /?&gt;
 </content:encoded>
 			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
 		</item>

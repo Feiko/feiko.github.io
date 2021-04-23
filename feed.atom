@@ -7,7 +7,7 @@
 	</author>
 	<link rel="self" href="https://feiko.io/" />
 	<rights>Copyright © 2021</rights>
-	<updated>2021-04-22T16:13:02Z</updated>
+	<updated>2021-04-23T07:14:05Z</updated>
 	<subtitle>Feiko's personal site about everything IoT and Tech</subtitle>
 	<entry>
 		<id>/posts/2021-04-20-first-vlog</id>
@@ -17,27 +17,6 @@
 		<content>&lt;p&gt;This is some extra.&lt;/p&gt;
 </content>
 		<summary>Dit is een eerste vlog hoe vind je dit</summary>
-	</entry>
-	<entry>
-		<id>/posts/2021-04-20-functionaliteit-blog</id>
-		<title>functionaliteit blog</title>
-		<link href="/posts/2021-04-20-functionaliteit-blog" />
-		<link rel="enclosure" type="image" href="/images/uploads/img_4425.jpg" />
-		<updated>2021-04-20T08:53:14Z</updated>
-		<content>&lt;p&gt;Dit is een test&lt;/p&gt;
-&lt;pre&gt;&lt;code class="language-csharp"&gt;using system;
-
-public class main{
-  public static program(){
-    string bla = &amp;quot;test&amp;quot;
-    Console.Writeline(bla);
-  }
-  
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;?# YouTube hnCmSXCZEpU /?&gt;
-</content>
-		<summary>Feiko's personal site about everything IoT and Tech</summary>
 	</entry>
 	<entry>
 		<id>/posts/2021-04-18-eerste-blog</id>
