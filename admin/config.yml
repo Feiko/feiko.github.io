@@ -3,7 +3,7 @@ backend:
   name: github
   repo: feiko/feiko.io
   branch: master
-  site_domain: feiko.netlify.app
+  site_domain: feiko.io
 
 media_folder: "/input/images/"
 
