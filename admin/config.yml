@@ -6,6 +6,7 @@ backend:
   site_domain: feiko.netlify.app
 
 media_folder: "/files/images/"
+public_folder: "/images/"
 
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
