@@ -6,15 +6,15 @@
 		<description>Feiko's personal site about everything IoT and Tech</description>
 		<copyright>Copyright © 2021</copyright>
 		<managingEditor>Feiko Gorter</managingEditor>
-		<pubDate>Fri, 30 Apr 2021 14:34:36 GMT</pubDate>
-		<lastBuildDate>Fri, 30 Apr 2021 14:34:36 GMT</lastBuildDate>
+		<pubDate>Fri, 30 Apr 2021 14:37:16 GMT</pubDate>
+		<lastBuildDate>Fri, 30 Apr 2021 14:37:16 GMT</lastBuildDate>
 		<item>
 			<title>Test Blog</title>
 			<link>/posts/2021-04-23-test-blog</link>
 			<description>This is a test Blog that should be ignored</description>
 			<enclosure url="/files/images/youtube.png" length="0" type="image" />
 			<guid isPermaLink="false">/posts/2021-04-23-test-blog</guid>
-			<pubDate>Fri, 30 Apr 2021 14:34:04 GMT</pubDate>
+			<pubDate>Fri, 30 Apr 2021 14:36:39 GMT</pubDate>
 			<content:encoded>&lt;p&gt;This is a test blog&lt;/p&gt;
 &lt;h3 id="hallo-tester"&gt;hallo tester&lt;/h3&gt;
 </content:encoded>
