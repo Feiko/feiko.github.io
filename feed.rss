@@ -6,19 +6,36 @@
 		<description>Feiko's personal site about everything IoT and Tech</description>
 		<copyright>Copyright © 2021</copyright>
 		<managingEditor>Feiko Gorter</managingEditor>
-		<pubDate>Fri, 30 Apr 2021 16:40:00 GMT</pubDate>
-		<lastBuildDate>Fri, 30 Apr 2021 16:40:00 GMT</lastBuildDate>
+		<pubDate>Fri, 30 Apr 2021 17:17:57 GMT</pubDate>
+		<lastBuildDate>Fri, 30 Apr 2021 17:17:57 GMT</lastBuildDate>
 		<item>
 			<title>Create your own .net powered website for FREE</title>
 			<link>/posts/2021-04-30-create-your-own-net-powered-website-for-free</link>
 			<description>Create an .net powered website for free using Github Pages, Statiq.web and NetlifyCMS - Part I</description>
 			<enclosure url="/images/computer-code_awxc4nofzn.jpg" length="0" type="image" />
 			<guid isPermaLink="false">/posts/2021-04-30-create-your-own-net-powered-website-for-free</guid>
-			<pubDate>Fri, 30 Apr 2021 16:39:23 GMT</pubDate>
-			<content:encoded>&lt;p&gt;Blog like Scott Hanselman. What self-respecting .net developer has not thought about writing their own blogs? I certainly have. As a Internet of Things Specialist and .net developer I have embarked on many IT adventures over the years. Adventures of lessons learned, amusement, frustrations and wins that I’d love to share with the world. Being a none native English speaking dyslexic has held me from doing this, but no longer! With this blog about creating a 100% .NET powered static website for free, I’m officially launching my own blog and video website. Feiko.IO says: “HELLO WORLD!!!”&lt;/p&gt;
-&lt;p&gt;When I decided to start a blog website I soon found out that hosting a cool Umbraco powered WEB app on Azure is quite expensive for a small site. The cheapest usable Web App tier would set me back 46 euro a month. This is way too much for this stubborn, lazy cheap ass developer. So I decided that ASP.NET is a no go.&lt;/p&gt;
-&lt;p&gt;I found the website world has radically changed since I build my last website in 2014. It’s a brave new world out there. Finally I found a solution to my website problem: Static Websites! Static websites are fast and cheap. But being a stubborn developer I want to build this website using .net technology, using ASP.NET goodies like Visual Studio tooling, Razor script and CSHTML. And atop on everything I want a dynamic Content Management System. Follow me on my adventure in creating the ideal .net static Website, like the one you are on right now! Because: Yes, you can have it all!&lt;/p&gt;
+			<pubDate>Fri, 30 Apr 2021 17:17:23 GMT</pubDate>
+			<content:encoded>&lt;!--StartFragment--&gt;
+&lt;p&gt;Blog like Scott Hanselman. What self-respecting .net developer has not thought about writing their own blogs? I certainly have. As an Internet of Things Specialist and .net developer, I have embarked on many IT adventures over the years. Adventures of lessons learned, amusement, frustrations and wins that I’d love to share with the world. Being a non-native English-speaking dyslexic has held me from doing this, but no longer! With this blog about creating a 100% .NET powered static website for free, I’m officially launching my own blog and video website. Feiko.IO says: “HELLO WORLD!!!”&lt;/p&gt;
+&lt;p&gt;When I decided to start a blog website, I soon found out that hosting a cool Umbraco powered WEB app on Azure is quite expensive for a small site. The cheapest usable Web App tier would set me back 46 euro a month. This is way too much for this stubborn, lazy, cheap ass developer. So I decided that ASP.NET is a no go.&lt;/p&gt;
+&lt;p&gt;I found the website world has radically changed since I built my last website in 2014. It’s a brave new world out there. Finally, I found a solution to my website problem: Static Websites! Static websites are fast and cheap. But being a stubborn developer, I want to build this website using .net technology, using ASP.NET goodies like Visual Studio tooling, Razor script and CSHTML. And on top of everything I want a dynamic Content Management System. Follow me on my adventure in creating the ideal .net static Website, like the one you are on right now! Because: Yes, you can have it all!&lt;/p&gt;
 &lt;p&gt;In this blog I’ll show you how to quickly create your own simple .net powered static blog website using the CleanBlog theme. Next week, in part II, we’ll talk about adding a headless flat-file Content Management System and hosting your site for free on GitHub Pages. It’s all about making blogging fun and easy!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Requirements&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Basic c# skills&lt;/li&gt;
+&lt;li&gt;Your favorite IDE (Visual Studio 2019)&lt;/li&gt;
+&lt;li&gt;.net 5 (other versions probably will work)&lt;/li&gt;
+&lt;li&gt;git&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="step-1-create-statiq-hello-world"&gt;&lt;strong&gt;STEP 1 -&lt;/strong&gt; create Statiq ‘HELLO WORLD’&lt;/h3&gt;
+&lt;p&gt;Start by following the great ‘getting started’ tutorial over on &lt;a href="https://statiq.dev/web/"&gt;Statiq.dev&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Now you have your first static website but there’s not a lot going on, just plain old HTML. Basically, that’s of course what static websites are just some HTML, CSS and JavaScript.&lt;/p&gt;
+&lt;p&gt;For now, to render a new page, you have to write a markup file inside your input directory and at some YAML to the top of the page. I know this is great for many people, but remember I’m a dyslexic so I’m going to have all kinds of typos in my YAML. Also, I will not remember all variables that I need to put at the top of my markdown file. That’s why I want a CMS. Clearly we’re just getting started and are still a far cry from a good-looking blog site. But that is all going to change… Just bear with me.&lt;/p&gt;
+&lt;h3 id="step-2-create-our-cleanblog-blogging-site"&gt;&lt;strong&gt;Step 2 -&lt;/strong&gt;  create our ‘CleanBlog’ blogging site&lt;/h3&gt;
+&lt;p&gt;Now we are going to create a proper site using the&lt;a href="https://startbootstrap.com/previews/clean-blog"&gt; ‘CleanBlog’&lt;/a&gt; theme.&lt;/p&gt;
+&lt;p&gt;For this, open a terminal (inside Visual Studio solution explorer, right click on your project and select ‘Open in Terminal’)&lt;/p&gt;
+&lt;p&gt;Clone the CleanBlog theme &lt;a href="https://github.com/statiqdev/CleanBlog"&gt;repo&lt;/a&gt; by typing the following:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git clone https://github.com/statiqdev/CleanBlog.git theme&lt;/code&gt;&lt;/p&gt;
 </content:encoded>
 			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
 		</item>
@@ -28,7 +45,7 @@
 			<description>This is a test Blog that should be ignored</description>
 			<enclosure url="/files/images/youtube.png" length="0" type="image" />
 			<guid isPermaLink="false">/posts/2021-04-23-test-blog</guid>
-			<pubDate>Fri, 30 Apr 2021 16:39:23 GMT</pubDate>
+			<pubDate>Fri, 30 Apr 2021 17:17:23 GMT</pubDate>
 			<content:encoded>&lt;p&gt;This is a test blog&lt;/p&gt;
 &lt;h3 id="hallo-tester"&gt;hallo tester&lt;/h3&gt;
 </content:encoded>
