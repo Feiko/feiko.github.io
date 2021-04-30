@@ -6,15 +6,15 @@
 		<description>Feiko's personal site about everything IoT and Tech</description>
 		<copyright>Copyright © 2021</copyright>
 		<managingEditor>Feiko Gorter</managingEditor>
-		<pubDate>Fri, 30 Apr 2021 15:52:42 GMT</pubDate>
-		<lastBuildDate>Fri, 30 Apr 2021 15:52:42 GMT</lastBuildDate>
+		<pubDate>Fri, 30 Apr 2021 15:57:15 GMT</pubDate>
+		<lastBuildDate>Fri, 30 Apr 2021 15:57:15 GMT</lastBuildDate>
 		<item>
 			<title>Create your own .net powered website for FREE</title>
 			<link>/posts/2021-04-30-create-your-own-net-powered-website-for-free</link>
 			<description>Create an .net powered website for free using Github Pages, Statiq.web and NetlifyCMS - Part I</description>
 			<enclosure url="/images/computer-code_awxc4nofzn.jpg" length="0" type="image" />
 			<guid isPermaLink="false">/posts/2021-04-30-create-your-own-net-powered-website-for-free</guid>
-			<pubDate>Fri, 30 Apr 2021 15:51:59 GMT</pubDate>
+			<pubDate>Fri, 30 Apr 2021 15:56:43 GMT</pubDate>
 			<content:encoded>&lt;p&gt;blog will come here&lt;/p&gt;
 </content:encoded>
 			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
@@ -25,7 +25,7 @@
 			<description>This is a test Blog that should be ignored</description>
 			<enclosure url="/files/images/youtube.png" length="0" type="image" />
 			<guid isPermaLink="false">/posts/2021-04-23-test-blog</guid>
-			<pubDate>Fri, 30 Apr 2021 15:51:59 GMT</pubDate>
+			<pubDate>Fri, 30 Apr 2021 15:56:43 GMT</pubDate>
 			<content:encoded>&lt;p&gt;This is a test blog&lt;/p&gt;
 &lt;h3 id="hallo-tester"&gt;hallo tester&lt;/h3&gt;
 </content:encoded>
