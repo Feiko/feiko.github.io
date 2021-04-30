@@ -55,7 +55,7 @@ collections:
       - {label: "Description", name: "description", widget: "text", default: "min length: 155, max length: 155"}
       - {label: "Published", name: "isPost", widget: "boolean", default: true}
       - {label: "Navigation Icon Awesome", name: "navIcon", widget: "string", required: false}
-      - {label: "Add to Navigation", name: " showInNavbar", widget: "boolean", default: true}     
+      - {label: "Add to Navigation", name: "showInNavbar", widget: "boolean", default: true}     
       - {label: "Body", name: "body", widget: "markdown", required: false}  
   
   - name: "general"
