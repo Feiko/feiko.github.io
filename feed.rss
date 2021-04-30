@@ -6,15 +6,15 @@
 		<description>Feiko's personal site about everything IoT and Tech</description>
 		<copyright>Copyright © 2021</copyright>
 		<managingEditor>Feiko Gorter</managingEditor>
-		<pubDate>Fri, 30 Apr 2021 17:26:29 GMT</pubDate>
-		<lastBuildDate>Fri, 30 Apr 2021 17:26:29 GMT</lastBuildDate>
+		<pubDate>Fri, 30 Apr 2021 17:39:45 GMT</pubDate>
+		<lastBuildDate>Fri, 30 Apr 2021 17:39:45 GMT</lastBuildDate>
 		<item>
 			<title>Create your own .net powered website for FREE</title>
 			<link>/posts/2021-04-30-create-your-own-net-powered-website-for-free</link>
 			<description>Create an .net powered website for free using Github Pages, Statiq.web and NetlifyCMS - Part I</description>
 			<enclosure url="/images/computer-code_awxc4nofzn.jpg" length="0" type="image" />
 			<guid isPermaLink="false">/posts/2021-04-30-create-your-own-net-powered-website-for-free</guid>
-			<pubDate>Fri, 30 Apr 2021 17:25:53 GMT</pubDate>
+			<pubDate>Fri, 30 Apr 2021 17:39:08 GMT</pubDate>
 			<content:encoded>&lt;!--StartFragment--&gt;
 &lt;p&gt;Blog like Scott Hanselman. What self-respecting .net developer has not thought about writing their own blogs? I certainly have. As an Internet of Things Specialist and .net developer, I have embarked on many IT adventures over the years. Adventures of lessons learned, amusement, frustrations and wins that I’d love to share with the world. Being a non-native English-speaking dyslexic has held me from doing this, but no longer! With this blog about creating a 100% .NET powered static website for free, I’m officially launching my own blog and video website. Feiko.IO says: “HELLO WORLD!!!”&lt;/p&gt;
 &lt;p&gt;When I decided to start a blog website, I soon found out that hosting a cool Umbraco powered WEB app on Azure is quite expensive for a small site. The cheapest usable Web App tier would set me back 46 euro a month. This is way too much for this stubborn, lazy, cheap ass developer. So I decided that ASP.NET is a no go.&lt;/p&gt;
@@ -37,9 +37,28 @@
 &lt;p&gt;Clone the CleanBlog theme &lt;a href="https://github.com/statiqdev/CleanBlog"&gt;repo&lt;/a&gt; by typing the following:&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;git clone https://github.com/statiqdev/CleanBlog.git theme&lt;/code&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;If you used git clone to get the theme, make sure you remove the hidden .git directory inside the theme directory. Else you will get an ‘The process '/usr/bin/git' failed with exit code 128’ when we are going to publish our website in part II.&lt;/em&gt;  &lt;/p&gt;
+&lt;p&gt;&lt;em&gt;If you used git clone to get the theme, make sure you remove the hidden .git directory inside the theme directory. Else you will get an ‘The process '/usr/bin/git' failed with exit code 128’ when we are going to publish our website in part II.&lt;/em&gt; &amp;nbsp;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Alternative: just create a new directory called ‘theme’ inside your project and extract the code from the repo inside this directory.&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;If you are still running the statiq preview, than exit this by typing: &lt;code&gt;Exit()&lt;/code&gt; inside the terminal that’s running statiq. Then run your project. This will generate the statiq website. Make sure you still have your index.md file inside the input directory, else there will be no content to create a website from. You can run the preview page at any time using the command:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Dotnet run -- preview&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;The preview mode will live update. How cool is that? Good work, Statiq!
+You can browse again to your website localhost:5080 and should see:&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/helloworld.png" alt="Your hello world landing page" title="Hello World CleanBlog"&gt;&lt;/p&gt;
+&lt;p&gt;This is great and is looking like a real website already. All that in just a matter of minutes!&lt;/p&gt;
+&lt;h3 id="step-3-create-your-first-blog"&gt;&lt;strong&gt;Step 3 -&lt;/strong&gt; Create your first Blog&lt;/h3&gt;
+&lt;p&gt;Statiq.web will by default look for blog content inside the input/posts directory. Create this posts directory.&lt;/p&gt;
+&lt;p&gt;If you open /theme/readme.md, you’ll see that a page expects the following YAML input:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;`Title`: The title of the page (or post).&lt;/li&gt;
+&lt;li&gt;`Description`: A description of the page.&lt;/li&gt;
+&lt;li&gt;`Lead`: Descriptive text that expands on the title, usually used for posts.&lt;/li&gt;
+&lt;li&gt;`Tags`: Tags for a blog post.&lt;/li&gt;
+&lt;li&gt;`Published`: The date a page or post was published.&lt;/li&gt;
+&lt;li&gt;`Image`: Path to an image for the page or post.&lt;/li&gt;
+&lt;li&gt;`ShowInNavbar`: Set to `false` to hide the page in the top navigation.&lt;/li&gt;
+&lt;li&gt;`IsPost`: Set to `false` to exclude the file from the set of posts. This will also disable post styling like displaying tags in the header.&lt;/li&gt;
+&lt;/ul&gt;
 </content:encoded>
 			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
 		</item>
@@ -49,7 +68,7 @@
 			<description>This is a test Blog that should be ignored</description>
 			<enclosure url="/files/images/youtube.png" length="0" type="image" />
 			<guid isPermaLink="false">/posts/2021-04-23-test-blog</guid>
-			<pubDate>Fri, 30 Apr 2021 17:25:53 GMT</pubDate>
+			<pubDate>Fri, 30 Apr 2021 17:39:08 GMT</pubDate>
 			<content:encoded>&lt;p&gt;This is a test blog&lt;/p&gt;
 &lt;h3 id="hallo-tester"&gt;hallo tester&lt;/h3&gt;
 </content:encoded>
