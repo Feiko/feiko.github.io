@@ -28,7 +28,6 @@
         <meta name="publish_date" property="og:article:published_time" content="05/01/2021 11:00" />
         <meta name="author" property="og:article:author" content="Feiko Gorter" />
         <meta property="og:section" content="Technology" />
-            <meta property="og:article:tag" content="blog" />
             <meta property="og:article:tag" content="Web" />
             <meta property="og:article:tag" content="static" />
             <meta property="og:article:tag" content="tutorial" />
@@ -107,7 +106,6 @@
 
                         <div>
                             <h5>Tags</h5>
-                                <a href="/tags/blog" class="badge badge-primary"> blog (1)</a>
                                 <a href="/tags/web" class="badge badge-primary"> Web (1)</a>
                                 <a href="/tags/static" class="badge badge-primary"> static (1)</a>
                                 <a href="/tags/tutorial" class="badge badge-primary"> tutorial (1)</a>
@@ -152,7 +150,6 @@
 <p>When I decided to start a blog website, I soon found out that hosting a cool Umbraco powered WEB app on Azure is quite expensive for a small site. The cheapest usable Web App tier would set me back 46 euro a month. This is way too much for this stubborn, lazy, cheap ass developer. So I decided that ASP.NET is a no go.</p>
 <p>I found the website world has radically changed since I built my last website in 2014. It’s a brave new world out there. Finally, I found a solution to my website problem: Static Websites! Static websites are fast and cheap. But being a stubborn developer, I want to build this website using .net technology, using ASP.NET goodies like Visual Studio tooling, Razor script and CSHTML. And on top of everything I want a dynamic Content Management System. Follow me on my adventure in creating the ideal .net static Website, like the one you are on right now! Because: Yes, you can have it all!</p>
 <p>In this blog I’ll show you how to quickly create your own simple .net powered static blog website using the CleanBlog theme. Next week, in part II, we’ll talk about adding a headless flat-file Content Management System and hosting your site for free on GitHub Pages. It’s all about making blogging fun and easy!</p>
-<p> </p>
 <p><strong>Requirements</strong></p>
 <ul>
 <li>Basic c# skills</li>
@@ -160,17 +157,11 @@
 <li>.net 5 (other versions probably will work)</li>
 <li>git</li>
 </ul>
-<p> </p>
-<p> </p>
 <h3 id="step-1-create-statiq-hello-world"><strong>STEP 1 -</strong> create Statiq ‘HELLO WORLD’</h3>
-<p> </p>
 <p>Start by following the great ‘getting started’ tutorial over on <a href="https://statiq.dev/web/">Statiq.dev</a></p>
 <p>Now you have your first static website but there’s not a lot going on, just plain old HTML. Basically, that’s of course what static websites are just some HTML, CSS and JavaScript.</p>
 <p>For now, to render a new page, you have to write a markup file inside your input directory and at some YAML to the top of the page. I know this is great for many people, but remember I’m a dyslexic so I’m going to have all kinds of typos in my YAML. Also, I will not remember all variables that I need to put at the top of my markdown file. That’s why I want a CMS. Clearly we’re just getting started and are still a far cry from a good-looking blog site. But that is all going to change… Just bear with me.</p>
-<p> </p>
-<p> </p>
 <h3 id="step-2-create-our-cleanblog-blogging-site"><strong>Step 2 -</strong>  create our ‘CleanBlog’ blogging site</h3>
-<p> </p>
 <p>Now we are going to create a proper site using the<a href="https://startbootstrap.com/previews/clean-blog"> ‘CleanBlog’</a> theme.</p>
 <p>For this, open a terminal (inside Visual Studio solution explorer, right click on your project and select ‘Open in Terminal’)</p>
 <p>Clone the CleanBlog theme <a href="https://github.com/statiqdev/CleanBlog">repo</a> by typing the following:</p>
@@ -183,14 +174,12 @@
 <p><code>Dotnet run -- preview</code></p>
 <p>The preview mode will live update. How cool is that? Good work, Statiq!
 You can browse again to your website localhost:5080 and should see:</p>
-<figure>
-  <img src="/images/helloworld.png" alt="Hello World site" class="img-fluid" title="Your hello world landing page" />
+<figure class="img-fluid">
+  <img src="/images/helloworld.png" alt="Hello World site" />
+  <figcaption></figcaption>
 </figure>
-<p>This is starting to look like a real website already. All in just a matter of minutes!</p>
-<p> </p>
-<p> </p>
+<p>This is starting to look like a real website already. All that in just a matter of minutes!</p>
 <h3 id="step-3-create-your-first-blog"><strong>Step 3 -</strong> Create your first Blog</h3>
-<p> </p>
 <p>Statiq.web will by default look for blog content inside the input/posts directory. Create this posts directory.</p>
 <p>If you open <em>/theme/readme.md</em>, you’ll see that a page expects the following YAML input:</p>
 <ul>
@@ -203,10 +192,10 @@ You can browse again to your website localhost:5080 and should see:</p>
 <li>`ShowInNavbar`: Set to `false` to hide the page in the top navigation.</li>
 <li>`IsPost`: Set to `false` to exclude the file from the set of posts. This will also disable post styling like displaying tags in the header.</li>
 </ul>
-<p>This is too much typing for my dyslexic brain. But be a hero and try it out, just like you build your <em>index.md</em>. Make sure your test blog is inside the <em>posts</em> directory. If you add content to your posts, you probably want to remove the <em>/input/index.md</em> you created in step 1. The index.html actually overwrites the <em>index.cshtml</em> inside the theme, therefore hiding you posts. You can add images to the <em>/input/image</em>s directory, which you need to create. You can add your image to your blog using by setting the <em>Title</em> variable:</p>
+<p>This is too much typing for my dyslexic brain. But be a hero and try it out, just like you build your index.md. Make sure your test blog is inside the <em>posts</em> directory. If you add content to your posts, you probably want to remove the <em>/input/index.md</em> you created in step 1. The index.html actually overwrites the <em>index.cshtml</em> inside the theme, therefore hiding you posts. You can add images to the <em>/input/image</em>s directory, which you need to create. You can add your image to your blog using by setting the <em>Title</em> variable:</p>
 <p><code>Image: /images/&lt;your image file name&gt;</code></p>
-<p>Also try out some of the cool supported markdown <a href="https://statiq.dev/web/content-and-data/content/shortcodes">ShortCodes</a> inside your blog. Why not play around with the other settings described in <em>/theme/readme.md.</em></p>
-<p>Okay, that’s it for this tutorial. We are already having fun with .net and static websites. A great thanks to <a href="https://daveaglick.com/">Dave Glick</a> for the splendid work on Statiq platform. None of this could be possible without his work. In my next post, part II, we are going to add the long awaited CMS and start hosting your site for free on Github Pages. I can’t wait!</p>
+<p>Also try out some of the cool supported markdown <a href="https://statiq.dev/web/content-and-data/content/shortcodes">ShortCodes</a> inside your blog.</p>
+<p>Okay, that’s it for this tutorial. We are already having fun with .net and static websites. A great thanks to <a href="https://daveaglick.com/">Dave Glick</a> for the splendid work on Statiq platform. None of this would be possible without his work. In my next post, part II, we are going to add the long awaited CMS and start hosting your site for free on Github Pages. I can’t wait!</p>
 
 
 
