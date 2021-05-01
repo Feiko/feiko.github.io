@@ -49,7 +49,7 @@
             // Fields the user need to fill out when adding an instance of the component
             fields: [{ name: 'image', label: 'Image', widget: 'image' }, { name: 'figCaption', label: 'Figure Caption', widget: 'string' }, { name: 'alt', label: 'Alt', widget: 'string' }, { name: 'class', label: 'Class', widget: 'string', default: "img-fluid" }],
             // Pattern to identify a block as being an instance of this component
-            pattern: /^<\?# Figure Src="([^"]+)" Class="([^"]+)" Alt="([^"]+)" Title="([^"]+)" \/\?>/,
+            pattern: /^<\?# Image Src="([^"]+)" Class="([^"]+)" Alt="([^"]+)" Title="([^"]+)" \/\?>/,
             // <?# YouTube u5ayTqlLWQQ /?> http://img.youtube.com/vi/u5ayTqlLWQQ
             // Function to extract data elements from the regexp match
             fromBlock: function (match) {
@@ -62,7 +62,7 @@
             },
             // Function to create a text block from an instance of this component
             toBlock: function (obj) {
-                return '<\?# Figure Src="' + obj.image + '" Class="' + obj.class + '" Alt="' + obj.alt + '" Title="' + obj.figCaption + '" /?>';
+                return '<\?# Image Src="' + obj.image + '" Class="' + obj.class + '" Alt="' + obj.alt + '" Title="' + obj.figCaption + '" /?>';
             },
             // Preview output for this component. Can either be a string or a React component
             // (component gives better render performance)

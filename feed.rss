@@ -6,8 +6,8 @@
 		<description>Feiko's personal site about everything IoT and Tech</description>
 		<copyright>Copyright © 2021</copyright>
 		<managingEditor>Feiko Gorter</managingEditor>
-		<pubDate>Sat, 01 May 2021 15:40:37 GMT</pubDate>
-		<lastBuildDate>Sat, 01 May 2021 15:40:37 GMT</lastBuildDate>
+		<pubDate>Sat, 01 May 2021 16:20:51 GMT</pubDate>
+		<lastBuildDate>Sat, 01 May 2021 16:20:51 GMT</lastBuildDate>
 		<item>
 			<title>Create your own .net powered website for FREE</title>
 			<link>/posts/2021-04-30-create-your-own-net-powered-website-for-free</link>
@@ -50,7 +50,7 @@
 &lt;p&gt;&lt;code&gt;Dotnet run -- preview&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;The preview mode will live update. How cool is that? Good work, Statiq!
 You can browse again to your website localhost:5080 and should see:&lt;/p&gt;
-&lt;?# Figure Src="/images/helloworld.png" Class="img-fluid" Alt="Hello World site" Title="Your hello world landing page" /?&gt;
+&lt;?# Image Src="/images/helloworld.png" Class="img-fluid" Alt="Hello World site" Title="Your hello world landing page" /?&gt;
 &lt;p&gt;This is starting to look like a real website already. All in just a matter of minutes!&lt;/p&gt;
 &lt;p&gt; &lt;/p&gt;
 &lt;p&gt; &lt;/p&gt;
