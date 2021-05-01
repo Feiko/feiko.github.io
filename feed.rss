@@ -6,8 +6,8 @@
 		<description>Feiko's personal site about everything IoT and Tech</description>
 		<copyright>Copyright © 2021</copyright>
 		<managingEditor>Feiko Gorter</managingEditor>
-		<pubDate>Sat, 01 May 2021 13:39:25 GMT</pubDate>
-		<lastBuildDate>Sat, 01 May 2021 13:39:25 GMT</lastBuildDate>
+		<pubDate>Sat, 01 May 2021 13:46:02 GMT</pubDate>
+		<lastBuildDate>Sat, 01 May 2021 13:46:02 GMT</lastBuildDate>
 		<item>
 			<title>Create your own .net powered website for FREE</title>
 			<link>/posts/2021-04-30-create-your-own-net-powered-website-for-free</link>
@@ -43,7 +43,7 @@
 &lt;p&gt;&lt;code&gt;Dotnet run -- preview&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;The preview mode will live update. How cool is that? Good work, Statiq!
 You can browse again to your website localhost:5080 and should see:&lt;/p&gt;
-&lt;?# Figure Src="/images/helloworld.png" Class="img-fluid" Alt="Hello World Website" Title="Your hello world landing page" /?&gt;
+&lt;?# Figure Src="/images/helloworld.png" Class="img-fluid" Alt="Hello World site" Title="Your hello world landing page" /?&gt;
 &lt;p&gt;This is starting to look like a real website already. All that in just a matter of minutes!&lt;/p&gt;
 &lt;h3 id="step-3-create-your-first-blog"&gt;&lt;strong&gt;Step 3 -&lt;/strong&gt; Create your first Blog&lt;/h3&gt;
 &lt;p&gt;Statiq.web will by default look for blog content inside the input/posts directory. Create this posts directory.&lt;/p&gt;
