@@ -7,7 +7,7 @@
 	</author>
 	<link rel="self" href="https://feiko.io/" />
 	<rights>Copyright © 2021</rights>
-	<updated>2021-05-01T14:46:44Z</updated>
+	<updated>2021-05-01T14:48:03Z</updated>
 	<subtitle>Feiko's personal site about everything IoT and Tech</subtitle>
 	<entry>
 		<id>/posts/2021-04-30-create-your-own-net-powered-website-for-free</id>
@@ -51,7 +51,7 @@
 &lt;p&gt;The preview mode will live update. How cool is that? Good work, Statiq!
 You can browse again to your website localhost:5080 and should see:&lt;/p&gt;
 &lt;?# Figure Src="/images/helloworld.png" Class="img-fluid" Alt="Hello World site" Title="Your hello world landing page" /?&gt;
-&lt;p&gt;This is starting to look like a real website already. All that in just a matter of minutes!&lt;/p&gt;
+&lt;p&gt;This is starting to look like a real website already. All in just a matter of minutes!&lt;/p&gt;
 &lt;p&gt; &lt;/p&gt;
 &lt;p&gt; &lt;/p&gt;
 &lt;h3 id="step-3-create-your-first-blog"&gt;&lt;strong&gt;Step 3 -&lt;/strong&gt; Create your first Blog&lt;/h3&gt;
