@@ -7,14 +7,14 @@
 	</author>
 	<link rel="self" href="https://feiko.io/" />
 	<rights>Copyright © 2021</rights>
-	<updated>2021-04-30T17:50:41Z</updated>
+	<updated>2021-05-01T10:21:08Z</updated>
 	<subtitle>Feiko's personal site about everything IoT and Tech</subtitle>
 	<entry>
 		<id>/posts/2021-04-30-create-your-own-net-powered-website-for-free</id>
 		<title>Create your own .net powered website for FREE</title>
 		<link href="/posts/2021-04-30-create-your-own-net-powered-website-for-free" />
 		<link rel="enclosure" type="image" href="/images/computer-code_awxc4nofzn.jpg" />
-		<updated>2021-04-30T17:50:04Z</updated>
+		<updated>2021-05-01T10:20:34Z</updated>
 		<content>&lt;!--StartFragment--&gt;
 &lt;p&gt;Blog like Scott Hanselman. What self-respecting .net developer has not thought about writing their own blogs? I certainly have. As an Internet of Things Specialist and .net developer, I have embarked on many IT adventures over the years. Adventures of lessons learned, amusement, frustrations and wins that I’d love to share with the world. Being a non-native English-speaking dyslexic has held me from doing this, but no longer! With this blog about creating a 100% .NET powered static website for free, I’m officially launching my own blog and video website. Feiko.IO says: “HELLO WORLD!!!”&lt;/p&gt;
 &lt;p&gt;When I decided to start a blog website, I soon found out that hosting a cool Umbraco powered WEB app on Azure is quite expensive for a small site. The cheapest usable Web App tier would set me back 46 euro a month. This is way too much for this stubborn, lazy, cheap ass developer. So I decided that ASP.NET is a no go.&lt;/p&gt;
@@ -65,16 +65,5 @@ You can browse again to your website localhost:5080 and should see:&lt;/p&gt;
 &lt;p&gt;Okay, that’s it for this tutorial. We are already having fun with .net and static websites. A great thanks to &lt;a href="https://daveaglick.com/"&gt;Dave Glick&lt;/a&gt; for the splendid work on Statiq platform. None of this could be possible without his work. In my next post, part II, we are going to add the long awaited CMS and start hosting your site for free on Github Pages. I can’t wait!&lt;/p&gt;
 </content>
 		<summary>Create an .net powered website for free using Github Pages, Statiq.web and NetlifyCMS - Part I</summary>
-	</entry>
-	<entry>
-		<id>/posts/2021-04-23-test-blog</id>
-		<title>Test Blog</title>
-		<link href="/posts/2021-04-23-test-blog" />
-		<link rel="enclosure" type="image" href="/files/images/youtube.png" />
-		<updated>2021-04-30T17:50:04Z</updated>
-		<content>&lt;p&gt;This is a test blog&lt;/p&gt;
-&lt;h3 id="hallo-tester"&gt;hallo tester&lt;/h3&gt;
-</content>
-		<summary>This is a test Blog that should be ignored</summary>
 	</entry>
 </feed>
