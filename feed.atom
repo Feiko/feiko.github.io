@@ -7,7 +7,7 @@
 	</author>
 	<link rel="self" href="https://feiko.io/" />
 	<rights>Copyright © 2021</rights>
-	<updated>2021-05-02T10:11:47Z</updated>
+	<updated>2021-05-03T12:08:53Z</updated>
 	<subtitle>Feiko's personal site about everything IoT and Tech</subtitle>
 	<entry>
 		<id>/posts/2021-04-30-create-your-own-net-powered-website-for-free</id>
@@ -28,14 +28,14 @@
 &lt;li&gt;.net 5 (other versions probably will work)&lt;/li&gt;
 &lt;li&gt;git
 &lt;br /&gt;
- 
-&lt;br /&gt;
  &lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;&lt;br /&gt;
+ &lt;/p&gt;
 &lt;h3 id="step-1-create-statiq-hello-world"&gt;&lt;strong&gt;STEP 1 -&lt;/strong&gt; create Statiq ‘HELLO WORLD’&lt;/h3&gt;
 &lt;p&gt;&lt;br /&gt;
- 
-Start by following the great ‘getting started’ tutorial over on &lt;a href="https://statiq.dev/web/"&gt;Statiq.dev&lt;/a&gt;&lt;/p&gt;
+ &lt;/p&gt;
+&lt;p&gt;Start by following the great ‘getting started’ tutorial over on &lt;a href="https://statiq.dev/web/"&gt;Statiq.dev&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Now you have your first static website but there’s not a lot going on, just plain old HTML. Basically, that’s of course what static websites are just some HTML, CSS and JavaScript.&lt;/p&gt;
 &lt;p&gt;For now, to render a new page, you have to write a markup file inside your input directory and at some YAML to the top of the page. I know this is great for many people, but remember I’m a dyslexic so I’m going to have all kinds of typos in my YAML. Also, I will not remember all variables that I need to put at the top of my markdown file. That’s why I want a CMS. Clearly we’re just getting started and are still a far cry from a good-looking blog site. But that is all going to change… Just bear with me.&lt;br /&gt;
 &lt;br /&gt;
@@ -44,8 +44,8 @@ Start by following the great ‘getting started’ tutorial over on &lt;a href="
  &lt;/p&gt;
 &lt;h3 id="step-2-create-our-cleanblog-blogging-site"&gt;&lt;strong&gt;Step 2 -&lt;/strong&gt;  create our ‘CleanBlog’ blogging site&lt;/h3&gt;
 &lt;p&gt;&lt;br /&gt;
- 
-Now we are going to create a proper site using the&lt;a href="https://startbootstrap.com/previews/clean-blog"&gt; ‘CleanBlog’&lt;/a&gt; theme.&lt;/p&gt;
+ &lt;/p&gt;
+&lt;p&gt;Now we are going to create a proper site using the&lt;a href="https://startbootstrap.com/previews/clean-blog"&gt; ‘CleanBlog’&lt;/a&gt; theme.&lt;/p&gt;
 &lt;p&gt;For this, open a terminal (inside Visual Studio solution explorer, right click on your project and select ‘Open in Terminal’)&lt;/p&gt;
 &lt;p&gt;Clone the CleanBlog theme &lt;a href="https://github.com/statiqdev/CleanBlog"&gt;repo&lt;/a&gt; by typing the following:&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;git clone https://github.com/statiqdev/CleanBlog.git theme&lt;/code&gt;&lt;/p&gt;
@@ -65,8 +65,8 @@ You can browse again to your website localhost:5080 and should see:&lt;/p&gt;
  &lt;/p&gt;
 &lt;h3 id="step-3-create-your-first-blog"&gt;&lt;strong&gt;Step 3 -&lt;/strong&gt; Create your first Blog&lt;/h3&gt;
 &lt;p&gt;&lt;br /&gt;
- 
-Statiq.web will by default look for blog content inside the input/posts directory. Create this posts directory.&lt;/p&gt;
+ &lt;/p&gt;
+&lt;p&gt;Statiq.web will by default look for blog content inside the input/posts directory. Create this posts directory.&lt;/p&gt;
 &lt;p&gt;If you open &lt;em&gt;/theme/readme.md&lt;/em&gt;, you’ll see that a page expects the following YAML input:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;`Title`: The title of the page (or post).&lt;/li&gt;
