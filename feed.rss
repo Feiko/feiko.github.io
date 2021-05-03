@@ -6,14 +6,14 @@
 		<description>Feiko's personal site about everything IoT and Tech</description>
 		<copyright>Copyright © 2021</copyright>
 		<managingEditor>Feiko Gorter</managingEditor>
-		<pubDate>Mon, 03 May 2021 15:38:40 GMT</pubDate>
-		<lastBuildDate>Mon, 03 May 2021 15:38:40 GMT</lastBuildDate>
+		<pubDate>Mon, 03 May 2021 17:08:32 GMT</pubDate>
+		<lastBuildDate>Mon, 03 May 2021 17:08:32 GMT</lastBuildDate>
 		<item>
 			<title>Create your own .net powered website for FREE</title>
-			<link>/posts/2021-04-30-create-your-own-net-powered-website-for-free</link>
+			<link>http://feiko.io/posts/2021-04-30-create-your-own-net-powered-website-for-free</link>
 			<description>Create an .net powered website for free using Github Pages, Statiq.web and NetlifyCMS - Part I</description>
-			<enclosure url="/images/computer-code_awxc4nofzn.jpg" length="0" type="image" />
-			<guid isPermaLink="false">/posts/2021-04-30-create-your-own-net-powered-website-for-free</guid>
+			<enclosure url="http://feiko.io/images/computer-code_awxc4nofzn.jpg" length="0" type="image" />
+			<guid>http://feiko.io/posts/2021-04-30-create-your-own-net-powered-website-for-free</guid>
 			<pubDate>Sat, 01 May 2021 11:00:45 GMT</pubDate>
 			<content:encoded>&lt;p&gt;Blog like Scott Hanselman. What self-respecting .net developer has not thought about writing their own blogs? I certainly have. As an Internet of Things Specialist and .net developer, I have embarked on many IT adventures over the years. Adventures of lessons learned, amusement, frustrations and wins that I’d love to share with the world. Being a non-native English-speaking dyslexic has held me from doing this, but no longer! With this blog about creating a 100% .NET powered static website for free, I’m officially launching my own blog and video website. Feiko.IO says: “HELLO WORLD!!!”&lt;/p&gt;
 &lt;p&gt;When I decided to start a blog website, I soon found out that hosting a cool Umbraco powered WEB app on Azure is quite expensive for a small site. The cheapest usable Web App tier would set me back 46 euro a month. This is way too much for this stubborn, lazy, cheap ass developer. So I decided that ASP.NET is a no go.&lt;/p&gt;
