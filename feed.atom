@@ -7,7 +7,7 @@
 	</author>
 	<link rel="self" href="https://feiko.io/" />
 	<rights>Copyright © 2021</rights>
-	<updated>2021-05-05T20:00:03Z</updated>
+	<updated>2021-05-06T10:20:51Z</updated>
 	<subtitle>Feiko's personal site about everything IoT and Tech</subtitle>
 	<entry>
 		<id>http://feiko.io/posts/2021-04-30-create-your-own-net-powered-website-for-free</id>
@@ -78,7 +78,7 @@ You can browse again to your website localhost:5080 and should see:&lt;/p&gt;
 &lt;li&gt;`ShowInNavbar`: Set to `false` to hide the page in the top navigation.&lt;/li&gt;
 &lt;li&gt;`IsPost`: Set to `false` to exclude the file from the set of posts. This will also disable post styling like displaying tags in the header.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;This is too much typing for my dyslexic brain. But be a hero and try it out, just like you build your index.md. Make sure your test blog is inside the &lt;em&gt;posts&lt;/em&gt; directory. If you add content to your posts, you probably want to remove the &lt;em&gt;/input/index.md&lt;/em&gt; you created in step 1. The index.html actually overwrites the &lt;em&gt;index.cshtml&lt;/em&gt; inside the theme, therefore hiding you posts. You can add images to the &lt;em&gt;/input/image&lt;/em&gt;s directory, which you need to create. You can add your image to your blog using by setting the &lt;em&gt;Title&lt;/em&gt; variable:&lt;/p&gt;
+&lt;p&gt;This is too much typing for my dyslexic brain. But be a hero and try it out, just like you build your index.md. Make sure your test blog is inside the &lt;em&gt;posts&lt;/em&gt; directory. If you add content to your posts, you probably want to remove the &lt;em&gt;/input/index.md&lt;/em&gt; you created in step 1. The index.html actually overwrites the &lt;em&gt;index.cshtml&lt;/em&gt; inside the theme, therefore hiding you posts. You can add images to the &lt;em&gt;/input/image&lt;/em&gt;s directory, which you need to create. You can add your image to your blog using by setting the &lt;em&gt;Image&lt;/em&gt; variable:&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;Image: /images/&amp;lt;your image file name&amp;gt;&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Also try out some of the cool supported markdown &lt;a href="https://statiq.dev/web/content-and-data/content/shortcodes"&gt;ShortCodes&lt;/a&gt; inside your blog.&lt;/p&gt;
 &lt;p&gt;Okay, that’s it for this tutorial. We are already having fun with .net and static websites. A great thanks to &lt;a href="https://daveaglick.com/"&gt;Dave Glick&lt;/a&gt; for the splendid work on Statiq platform. None of this would be possible without his work. In my next post, part II, we are going to add the long awaited CMS and start hosting your site for free on Github Pages. I can’t wait!&lt;/p&gt;
