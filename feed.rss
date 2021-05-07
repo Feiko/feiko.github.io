@@ -6,8 +6,182 @@
 		<description>Feiko's personal site about everything IoT and Tech</description>
 		<copyright>Copyright © 2021</copyright>
 		<managingEditor>Feiko Gorter</managingEditor>
-		<pubDate>Fri, 07 May 2021 18:44:23 GMT</pubDate>
-		<lastBuildDate>Fri, 07 May 2021 18:44:23 GMT</lastBuildDate>
+		<pubDate>Fri, 07 May 2021 18:51:06 GMT</pubDate>
+		<lastBuildDate>Fri, 07 May 2021 18:51:06 GMT</lastBuildDate>
+		<item>
+			<title>Adding Netlify CMS to your .NET powered static Website</title>
+			<link>http://feiko.io/posts/2021-05-07-adding-netlify-cms-to-your-net-powered-static-website</link>
+			<description>Create an .net powered website for free using Github Pages, Statiq.web and Netlify CMS - Part II</description>
+			<enclosure url="http://feiko.io/images/netlify-cms-example.png" length="0" type="image" />
+			<guid>http://feiko.io/posts/2021-05-07-adding-netlify-cms-to-your-net-powered-static-website</guid>
+			<pubDate>Fri, 07 May 2021 16:53:38 GMT</pubDate>
+			<content:encoded>&lt;p&gt;This is part II of the series about creating your own .NET powered static website. Here you can find part I: &lt;a href="https://www.feiko.io/posts/2021-04-30-create-your-own-net-powered-website-for-free"&gt;Create your own .net powered static website for FREE&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;In this tutorial we are going to use NetlifyCMS. Netlify CMS is a flat-file headless CMS. Flat-file means that content is saved to simple files rather than using a database like SQL or MongoDB. In our case, these are Markdown files. A headless CMS is a Content Management System that is completely detached and unaware of any backend systems used to generate your website. This differs completely from the systems we know from the ASP.NET world. A traditional CMS like Umbraco is completely built on top of ASP.NET MVC and uses a SQL database. The content management and public website are very much intertwined and done by the same hosting platform.&lt;/p&gt;
+&lt;p&gt;Flat-file and headless CMS systems are ideal for managing content of simple websites. These systems are usually very nimble and easy to set up.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;At the end of this tutorial you will have:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A repository running your actual clean static public GitHub Page&lt;/li&gt;
+&lt;li&gt;A second private repository running your .NET site-generator/backend that you build in Part I&lt;/li&gt;
+&lt;li&gt;The Netlify CMS that uses Netlify to update your markdown content on GitHub&lt;/li&gt;
+&lt;li&gt;A GitHub Actions attached to your site generator that will automatically update your website&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Let’s get started and pick up where we left off in Part I. You can also look into my &lt;a href="https://github.com/Feiko/StaticBlogExample"&gt;example repo&lt;/a&gt; on my GitHub.
+&lt;br /&gt;
+ 
+&lt;br /&gt;
+ &lt;/p&gt;
+&lt;h3 id="step-1-adding-the-netlify-cms-and-github-repos"&gt;&lt;strong&gt;Step 1 -&lt;/strong&gt; Adding the Netlify CMS and GitHub repos&lt;/h3&gt;
+&lt;p&gt;&lt;br /&gt;
+ &lt;/p&gt;
+&lt;p&gt;We start by adding Netlify CMS so we can add and manage our content in a friendly manner. Open the project you created in Part I and create an &lt;em&gt;admin&lt;/em&gt; directory inside the &lt;em&gt;input&lt;/em&gt; directory. In this directory we create an &lt;em&gt;index.html&lt;/em&gt; file with the following magic Netlify CMS code:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-html"&gt;ShouldOutput: true
+---
+&amp;lt;!doctype html&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+  &amp;lt;meta charset=&amp;quot;utf-8&amp;quot; /&amp;gt;
+  &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0&amp;quot; /&amp;gt;
+  &amp;lt;title&amp;gt;Content Manager&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+  &amp;lt;!-- Include the script that builds the page and powers Netlify CMS --&amp;gt;
+  &amp;lt;script src=&amp;quot;https://unpkg.com/netlify-cms&amp;#64;^2.0.0/dist/netlify-cms.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now we are going to push our code to a new GitHub repo on your GitHub. We can easily do this in the latest version of VS2019 using ‘Git Changes’. Make sure you give your repository a meaningful name like ‘MyWebSiteGenerator’. Please don’t tell me you don’t have a GitHub account!!! Shame on you, you call yourself a developer 😜 ???&lt;/p&gt;
+&lt;?# Image Src="/images/create-github-repo-with-vs2019.png" Class="img-fluid" Alt="Create GitHub Repo using VS2019" Title="Create GitHub Repo using VS2019" /?&gt;
+&lt;p&gt;&lt;br /&gt;
+ 
+&lt;br /&gt;
+ &lt;/p&gt;
+&lt;h3 id="step-2-registering-your-github-page"&gt;&lt;strong&gt;Step 2 -&lt;/strong&gt; Registering your GitHub Page&lt;/h3&gt;
+&lt;p&gt;&lt;br /&gt;
+ &lt;/p&gt;
+&lt;p&gt;Now your code is in GitHub we will have to add some magic to hook up the NetlifyCMS. For this we first need to set up a Netlify site (we are not going to use this site… complicated I know. And, ‘Yes I wish there was a better way…’)&lt;/p&gt;
+&lt;p&gt;But first, now we are in GitHub, let’s do some plumbing for our GitHub page. Create a new public repository on your GitHub and name this repository &amp;lt;YourGithubName&amp;gt;.github.io. This will also be the domain where your website is hosted. Next we need to hook up your code to automatically deploy to this GitHub Page. Go inside the newly created Page repo and go to the ‘Settings’ tap and select 'Pages'. Press ‘Choose a theme’ and select the first theme and press ‘Select theme’. This will generate a branch called ‘gh-pages’ where the selected theme will deploy. Don’t worry we are going to overwrite this default theme with our own awesome static website.&lt;/p&gt;
+&lt;p&gt;If you know go to the ‘Pages’ section in your repo ‘Settings’, you should see in green ‘Your site is published at https://&amp;lt;YourGithubName&amp;gt;.github.io/’. If it says published at https://&amp;lt;YourGithubName&amp;gt;.github.io/&amp;lt;RepoName&amp;gt;/’ then you did not name your repo correctly &amp;lt;YourGithubName&amp;gt;.github.io. This will not work because the blog site expects to be published inside the root of your website domain!
+&lt;br /&gt;
+ 
+&lt;br /&gt;
+ &lt;/p&gt;
+&lt;h3 id="step-3-setup-netlify-cms"&gt;&lt;strong&gt;Step 3 -&lt;/strong&gt; Setup Netlify CMS&lt;/h3&gt;
+&lt;p&gt;&lt;br /&gt;
+ &lt;/p&gt;
+&lt;p&gt;To set up Netlify CMS follow the first two steps ‘creating an GitHub OAuth App’ and ‘Creating a Netlify Site’ from the following &lt;a href="https://cnly.github.io/2018/04/14/just-3-steps-adding-netlify-cms-to-existing-github-pages-site-within-10-minutes.html"&gt;great blog&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Now we can add the &lt;em&gt;config.yml&lt;/em&gt; to &lt;em&gt;/input/admin&lt;/em&gt; directory inside your code. This is the heart of the Netlify CMS. You can download my &lt;em&gt;config.yml&lt;/em&gt; from my &lt;a href="https://github.com/Feiko/StaticBlogExample/blob/master/input/admin/config.yml"&gt;GitHub Repo&lt;/a&gt;. I’ve gone ahead and configured this &lt;em&gt;config.yml&lt;/em&gt; file for you. You only have to change the backend settings inside the &lt;em&gt;config.yml&lt;/em&gt; to target the GitHub Repo where your site generator lives (so not your GitHub Pages Repo). So change ‘repo:  &amp;lt;GitHubName&amp;gt;/&amp;lt;RepoName&amp;gt;‘  i.e.  feiko/StaticBlogExample. Also change the site domain 'site_domain'  to the &amp;lt;SiteName&amp;gt;.netlify.app  you just created when configuring Netlify. If you use a different branch then ‘master’ please also change this setting.&lt;/p&gt;
+&lt;p&gt;Go ahead and git commit and push this &lt;em&gt;config.yml&lt;/em&gt; to GitHub. Now you can preview the site locally using the &lt;code&gt;dotnet run -- preview&lt;/code&gt; command (see Part I) and browse to ‘localhost:5080/admin’. You should be able to log into your CMS using your GitHub credentials.&lt;/p&gt;
+&lt;p&gt;Now you can write a blog or page in the CMS. Netlify will automatically commit your new content to your remote GitHub repo. To preview the changes locally, you need to ‘git pull’ the content from your remote repo. Run the preview site and enjoy your freshly written blog… locally…&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Note:&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Don’t forget to commit and push your local changes to GitHub. You can also add the /output folder to the .gitignore file so you don’t keep pushing and pulling these changes.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Note:&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;If the admin page is displayed malformed mixed with CleanBlog theme elements. Then we need to tell Statiq to ignore the &lt;em&gt;admin&lt;/em&gt; directory. If everything looks okay, then ignore this step.&lt;/p&gt;
+&lt;p&gt;To tell Statiq to ignore the &lt;em&gt;/input/admin&lt;/em&gt; directory you can insert the following code to &lt;em&gt;program.cs&lt;/em&gt; after ‘.CreateWeb(args)’.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-csharp"&gt;.AddSetting(WebKeys.ExcludedPaths,
+            	new List&amp;lt;NormalizedPath&amp;gt;
+            	{
+                	new NormalizedPath(&amp;quot;input/admin&amp;quot;),
+            	})
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;
+ 
+&lt;br /&gt;
+ &lt;/p&gt;
+&lt;h3 id="step-4-deploy-your-site-to-github-pages"&gt;&lt;strong&gt;Step 4 -&lt;/strong&gt;Deploy your site to GitHub Pages&lt;/h3&gt;
+&lt;p&gt;&lt;br /&gt;
+ &lt;/p&gt;
+&lt;p&gt;Finally we come to the magic Sauce. We are going to host our site on our GitHub Page and use GitHub Actions to update your website automatically every time you commit a change in your CMS or on your GitHub repo.&lt;/p&gt;
+&lt;p&gt;First we are going to generate a token to allow Github Action to update your GitHub Pages. For this login into GitHub.com. In the top right click on your icon and in the drop-down menu select ‘Settings’. Now select ‘Developer Settings’ and then select ‘Personal access tokens’. Click ‘Generate new token’. Give the token a recognizable name in ‘Note’ i.e. ‘Page Token’, then &lt;strong&gt;only&lt;/strong&gt; check ‘public_repo’ under ‘Select scopes’, at the bottom click the green ‘Generate token’ button. Copy the generated token to a temp document for later use.&lt;/p&gt;
+&lt;p&gt;Now we tell Statiq where to deploy or website, by adding the following code to Program.cs, after ‘.CreateWeb(args)&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-csharp"&gt;.DeployToGitHubPagesBranch(
+            	&amp;quot;&amp;lt;githubName in my case: feiko&amp;gt;&amp;quot;,
+            	&amp;quot;&amp;lt;RepoName Github Pages, in my case: feiko.github.io &amp;gt;&amp;quot;,
+                Environment.GetEnvironmentVariable(&amp;quot;GITHUB_TOKEN&amp;quot;),
+            	&amp;quot;&amp;lt;the branch name that holds the page content, in my case: gh-pages&amp;gt;&amp;quot;
+            	)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;My complete program.cs looks like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-csharp"&gt;using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Statiq.App;
+using Statiq.Common;
+using Statiq.Web;
+ 
+namespace StaticBlogExample
+{
+	public class Program
+	{
+    	public static async Task&amp;lt;int&amp;gt; Main(string[] args) =&amp;gt;
+        	await Bootstrapper
+        	.Factory
+        	.CreateWeb(args)
+        	.DeployToGitHubPagesBranch(
+            	&amp;quot;feiko&amp;quot;,
+            	&amp;quot;feiko.github.io&amp;quot;,
+                Environment.GetEnvironmentVariable(&amp;quot;PAGE_TOKEN&amp;quot;),
+            	&amp;quot;gh-pages&amp;quot;
+            	)
+        	.AddSetting(WebKeys.ExcludedPaths,
+            	new List&amp;lt;NormalizedPath&amp;gt;
+            	{
+                	new NormalizedPath(&amp;quot;input/admin&amp;quot;),
+            	})
+ 
+        	.RunAsync();
+	}
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can optionally test this code by changing the  ‘Environment.GetEnvironmentVariable(&amp;quot;PAGE_TOKEN&amp;quot;)’, to the token string you copied earlier. Now run &lt;code&gt;dotnet run -- deploy&lt;/code&gt;. Your content should now be visible inside your GitHub pages repo and you can visit your static website at ‘https://&amp;lt;YourGithubName&amp;gt;.github.io/’. It can take a couple of minutes for GitHub to start hosting your site the first time.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Never&lt;/strong&gt; commit your GitHub token to GitHub. So be sure to change this line back after you’ve finished. If you have published your token by accident, your token will no longer work and you have to renew your token.*&lt;/p&gt;
+&lt;p&gt;Now make sure you commit and push your code to GitHub for the last time.
+&lt;br /&gt;
+ 
+&lt;br /&gt;
+ &lt;/p&gt;
+&lt;h3 id="step-5-automatic-deployment-using-github-actions"&gt;&lt;strong&gt;Step 5 -&lt;/strong&gt; Automatic deployment using GitHub Actions&lt;/h3&gt;
+&lt;p&gt;&lt;br /&gt;
+ &lt;/p&gt;
+&lt;p&gt;The last step is to create a GitHub Action that will run the website generator every time you update your website using your CMS or checking in some new code.&lt;/p&gt;
+&lt;p&gt;Go to GitHub and open the Repo with your site generator code (not your GitHub Page repo). Open the tab ‘Actions’ and click ‘set up a workflow yourself -&amp;gt;’.&lt;/p&gt;
+&lt;p&gt;Replace the code inside the editor with the following script:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-csharp"&gt;name: Publish GitHub_Page
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout&amp;#64;v2
+    - name: Setup .NET
+      uses: actions/setup-dotnet&amp;#64;v1
+      with:
+        dotnet-version: 5.0.x
+    - run: dotnet run -- deploy
+      env:
+        PAGE_TOKEN: ${{ secrets.PAGE_TOKEN }}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then press the green ‘start commit’ button. Finally we need to generate an authorization token that will allow Actions to deploy to GitHub Pages. Go to the ‘settings’ tap of your site-generator-repo and in your left menu select ‘Secrets’ to create a secret for your GitHub commit token. Click ‘New repository secret’. Name this secret ‘PAGE_TOKEN', inside the ‘Value’ paste the token you generated earlier. Now press ‘Add secret’ and voila your token is stored securely inside your GitHub Repo.&lt;/p&gt;
+&lt;p&gt;To kick off the action and deploy your site the first time you need to make a Git commit to your website. The easiest way to do this is by creating a readme.md inside the root of your site generator repo in Github. This commit will kick off the action. You can see your action status in the GitHub ‘action’ tab. After your Action has run successfully, you see your static blog at https://&amp;lt;YourGithubName&amp;gt;.github.io/. From now on all changes you make inside your CMS https://&amp;lt;YourGithubName&amp;gt;.github.io/admin/, will be committed to the GitHub websiteGenerator repo. This will kick off the action and update your website. &lt;/p&gt;
+&lt;p&gt;And now you're &lt;strong&gt;done&lt;/strong&gt;! Congratulations, how cool! You see, now all .NET geeks can blog like Scott Hanselman! I can’t wait for you to share your knowledge with the world.&lt;/p&gt;
+&lt;p&gt;If you want to create a more special website like myself, you can create your own theme or reuse a theme you already have. Be sure to check out the documentation on &lt;a href="https://statiq.dev/web/"&gt;https://statiq.dev/web/&lt;/a&gt;, also look at the documentation of Netlify CMS on &lt;a href="https://www.netlifycms.org/docs/configuration-options/"&gt;how to configure your config.yml file&lt;/a&gt;. Happy coding!
+&lt;br /&gt;
+ 
+&lt;br /&gt;
+ &lt;/p&gt;
+&lt;h3 id="conclusion"&gt;&lt;strong&gt;Conclusion&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;br /&gt;
+ &lt;/p&gt;
+&lt;p&gt;Having a .NET powered static page generator made my life a lot easier. I was able to reuse a lot of my old ASP.NET knowledge when creating my own web theme. Setting up Netlify CMS together with a Netlify account can feel a bit circumstantial. But having a CMS experience makes adding content a lot easier. Because we have used a flat-file headless CMS we can easily switch from the CMS system. Perhaps in the future we would have a CMS built using .NET Blazor, that would be really awesome! &lt;/p&gt;
+&lt;p&gt;Please let me know if you found this blog helpful or have any questions. Happy coding!&lt;/p&gt;
+</content:encoded>
+			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
+		</item>
 		<item>
 			<title>Create your own .net powered static website for FREE</title>
 			<link>http://feiko.io/posts/2021-04-30-create-your-own-net-powered-website-for-free</link>
