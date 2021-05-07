@@ -6,8 +6,8 @@
 		<description>Feiko's personal site about everything IoT and Tech</description>
 		<copyright>Copyright © 2021</copyright>
 		<managingEditor>Feiko Gorter</managingEditor>
-		<pubDate>Fri, 07 May 2021 20:09:31 GMT</pubDate>
-		<lastBuildDate>Fri, 07 May 2021 20:09:31 GMT</lastBuildDate>
+		<pubDate>Fri, 07 May 2021 20:28:02 GMT</pubDate>
+		<lastBuildDate>Fri, 07 May 2021 20:28:02 GMT</lastBuildDate>
 		<item>
 			<title>Adding Netlify CMS to your .NET powered static Website</title>
 			<link>http://feiko.io/posts/2021-05-07-adding-netlify-cms-to-your-net-powered-static-website</link>
@@ -87,7 +87,7 @@
  
 &lt;br /&gt;
  &lt;/p&gt;
-&lt;h3 id="step-4-deploy-your-site-to-github-pages"&gt;&lt;strong&gt;Step 4 -&lt;/strong&gt;Deploy your site to GitHub Pages&lt;/h3&gt;
+&lt;h3 id="step-4-deploy-your-site-to-github-pages"&gt;&lt;strong&gt;Step 4 -&lt;/strong&gt; Deploy your site to GitHub Pages&lt;/h3&gt;
 &lt;p&gt;&lt;br /&gt;
  &lt;/p&gt;
 &lt;p&gt;Finally we come to the magic Sauce. We are going to host our site on our GitHub Page and use GitHub Actions to update your website automatically every time you commit a change in your CMS or on your GitHub repo.&lt;/p&gt;
