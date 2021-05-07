@@ -193,7 +193,7 @@
  
 <br />
  </p>
-<h3 id="step-2-registering-your-github-page"><strong>Step 2 -</strong> Registering your GitHub Page###</h3>
+<h3 id="step-2-registering-your-github-page"><strong>Step 2 -</strong> Registering your GitHub Page</h3>
 <p><br />
  </p>
 <p>Now your code is in GitHub we will have to add some magic to hook up the NetlifyCMS. For this we first need to set up a Netlify site (we are not going to use this site… complicated I know. And, ‘Yes I wish there was a better way…’)</p>
@@ -203,24 +203,18 @@
  
 <br />
  </p>
-<p>Step 3 - Setup Netlify CMS
-<br />
+<h3 id="step-3-setup-netlify-cms"><strong>Step 3 -</strong> Setup Netlify CMS</h3>
+<p><br />
  </p>
 <p>To set up Netlify CMS follow the first two steps ‘creating an GitHub OAuth App’ and ‘Creating a Netlify Site’ from the following <a href="https://cnly.github.io/2018/04/14/just-3-steps-adding-netlify-cms-to-existing-github-pages-site-within-10-minutes.html">great blog</a>.</p>
 <p>Now we can add the <em>config.yml</em> to <em>/input/admin</em> directory inside your code. This is the heart of the Netlify CMS. You can download my <em>config.yml</em> from my <a href="https://github.com/Feiko/StaticBlogExample/blob/master/input/admin/config.yml">GitHub Repo</a>. I’ve gone ahead and configured this <em>config.yml</em> file for you. You only have to change the backend settings inside the <em>config.yml</em> to target the GitHub Repo where your site generator lives (so not your GitHub Pages Repo). So change ‘repo:  <GitHubName>/<RepoName>‘  i.e.  feiko/StaticBlogExample. Also change the site domain 'site_domain'  to the <SiteName>.netlify.app  you just created when configuring Netlify. If you use a different branch then ‘master’ please also change this setting.</p>
 <p>Go ahead and git commit and push this <em>config.yml</em> to GitHub. Now you can preview the site locally using the <code>dotnet run -- preview</code> command (see Part I) and browse to ‘localhost:5080/admin’. You should be able to log into your CMS using your GitHub credentials.</p>
 <p>Now you can write a blog or page in the CMS. Netlify will automatically commit your new content to your remote GitHub repo. To preview the changes locally, you need to ‘git pull’ the content from your remote repo. Run the preview site and enjoy your freshly written blog… locally…</p>
 <p><em><strong>Note:</strong></em></p>
-<blockquote>
-<p>Don’t forget to commit and push your local changes to GitHub. You can &gt;also add the /output folder to the .gitignore file so you don’t keep &gt;pushing and pulling these changes.</p>
-</blockquote>
+<p>Don’t forget to commit and push your local changes to GitHub. You can also add the /output folder to the .gitignore file so you don’t keep pushing and pulling these changes.</p>
 <p><em><strong>Note:</strong></em></p>
-<blockquote>
-<p>If the admin page is displayed malformed mixed with CleanBlog theme &gt;elements. Then we need to tell Statiq to ignore the <em>admin</em> directory. &gt;If everything looks okay, then ignore this step.</p>
-</blockquote>
-<blockquote>
-<p>To tell Statiq to ignore the <em>/input/admin</em> directory you can insert &gt;the following code to <em>program.cs</em> after ‘.CreateWeb(args)’.</p>
-</blockquote>
+<p>If the admin page is displayed malformed mixed with CleanBlog theme elements. Then we need to tell Statiq to ignore the <em>admin</em> directory. If everything looks okay, then ignore this step.</p>
+<p>To tell Statiq to ignore the <em>/input/admin</em> directory you can insert the following code to <em>program.cs</em> after ‘.CreateWeb(args)’.</p>
 <pre><code class="language-csharp">.AddSetting(WebKeys.ExcludedPaths,
             	new List&lt;NormalizedPath&gt;
             	{
@@ -231,6 +225,98 @@
  
 <br />
  </p>
+<h3 id="step-4-deploy-your-site-to-github-pages"><strong>Step 4 -</strong>Deploy your site to GitHub Pages</h3>
+<p><br />
+ </p>
+<p>Finally we come to the magic Sauce. We are going to host our site on our GitHub Page and use GitHub Actions to update your website automatically every time you commit a change in your CMS or on your GitHub repo.</p>
+<p>First we are going to generate a token to allow Github Action to update your GitHub Pages. For this login into GitHub.com. In the top right click on your icon and in the drop-down menu select ‘Settings’. Now select ‘Developer Settings’ and then select ‘Personal access tokens’. Click ‘Generate new token’. Give the token a recognizable name in ‘Note’ i.e. ‘Page Token’, then <strong>only</strong> check ‘public_repo’ under ‘Select scopes’, at the bottom click the green ‘Generate token’ button. Copy the generated token to a temp document for later use.</p>
+<p>Now we tell Statiq where to deploy or website, by adding the following code to Program.cs, after ‘.CreateWeb(args)</p>
+<pre><code class="language-csharp">.DeployToGitHubPagesBranch(
+            	&quot;&lt;githubName in my case: feiko&gt;&quot;,
+            	&quot;&lt;RepoName Github Pages, in my case: feiko.github.io &gt;&quot;,
+                Environment.GetEnvironmentVariable(&quot;GITHUB_TOKEN&quot;),
+            	&quot;&lt;the branch name that holds the page content, in my case: gh-pages&gt;&quot;
+            	)
+</code></pre>
+<p>My complete program.cs looks like this:</p>
+<pre><code class="language-csharp">using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Statiq.App;
+using Statiq.Common;
+using Statiq.Web;
+ 
+namespace StaticBlogExample
+{
+	public class Program
+	{
+    	public static async Task&lt;int&gt; Main(string[] args) =&gt;
+        	await Bootstrapper
+        	.Factory
+        	.CreateWeb(args)
+        	.DeployToGitHubPagesBranch(
+            	&quot;feiko&quot;,
+            	&quot;feiko.github.io&quot;,
+                Environment.GetEnvironmentVariable(&quot;PAGE_TOKEN&quot;),
+            	&quot;gh-pages&quot;
+            	)
+        	.AddSetting(WebKeys.ExcludedPaths,
+            	new List&lt;NormalizedPath&gt;
+            	{
+                	new NormalizedPath(&quot;input/admin&quot;),
+            	})
+ 
+        	.RunAsync();
+	}
+}
+</code></pre>
+<p>You can optionally test this code by changing the  ‘Environment.GetEnvironmentVariable(&quot;PAGE_TOKEN&quot;)’, to the token string you copied earlier. Now run <code>dotnet run -- deploy</code>. Your content should now be visible inside your GitHub pages repo and you can visit your static website at ‘https://<YourGithubName>.github.io/’. It can take a couple of minutes for GitHub to start hosting your site the first time.</p>
+<p><strong>Never</strong> commit your GitHub token to GitHub. So be sure to change this line back after you’ve finished. If you have published your token by accident, your token will no longer work and you have to renew your token.*</p>
+<p>Now make sure you commit and push your code to GitHub for the last time.
+<br />
+ 
+<br />
+ </p>
+<h3 id="step-5-automatic-deployment-using-github-actions"><strong>Step 5 -</strong> Automatic deployment using GitHub Actions</h3>
+<p><br />
+ </p>
+<p>The last step is to create a GitHub Action that will run the website generator every time you update your website using your CMS or checking in some new code.</p>
+<p>Go to GitHub and open the Repo with your site generator code (not your GitHub Page repo). Open the tab ‘Actions’ and click ‘set up a workflow yourself -&gt;’.</p>
+<p>Replace the code inside the editor with the following script:</p>
+<pre><code class="language-yaml">name: Publish GitHub_Page
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout&#64;v2
+    - name: Setup .NET
+      uses: actions/setup-dotnet&#64;v1
+      with:
+        dotnet-version: 5.0.x
+    - run: dotnet run -- deploy
+      env:
+        PAGE_TOKEN: ${{ secrets.PAGE_TOKEN }}
+</code></pre>
+<p>Then press the green ‘start commit’ button. Finally we need to generate an authorization token that will allow Actions to deploy to GitHub Pages. Go to the ‘settings’ tap of your site-generator-repo and in your left menu select ‘Secrets’ to create a secret for your GitHub commit token. Click ‘New repository secret’. Name this secret ‘PAGE_TOKEN', inside the ‘Value’ paste the token you generated earlier. Now press ‘Add secret’ and voila your token is stored securely inside your GitHub Repo.</p>
+<p>To kick off the action and deploy your site the first time you need to make a Git commit to your website. The easiest way to do this is by creating a readme.md inside the root of your site generator repo in Github. This commit will kick off the action. You can see your action status in the GitHub ‘action’ tab. After your Action has run successfully, you see your static blog at https://&lt;YourGithubName&gt;.github.io/. From now on all changes you make inside your CMS https://&lt;YourGithubName&gt;.github.io/admin/, will be committed to the GitHub websiteGenerator repo. This will kick off the action and update your website. </p>
+<p>And now you're <strong>done</strong>! Congratulations, how cool! You see, now all .NET geeks can blog like Scott Hanselman! I can’t wait for you to share your knowledge with the world.</p>
+<p>If you want to create a more special website like myself, you can create your own theme or reuse a theme you already have. Be sure to check out the documentation on <a href="https://statiq.dev/web/">https://statiq.dev/web/</a>, also look at the documentation of Netlify CMS on <a href="https://www.netlifycms.org/docs/configuration-options/">how to configure your config.yml file</a>. Happy coding!
+<br />
+ 
+<br />
+ </p>
+<h3 id="conclusion"><strong>Conclusion</strong></h3>
+<p><br />
+ </p>
+<p>Having a .NET powered static page generator made my life a lot easier. I was able to reuse a lot of my old ASP.NET knowledge when creating my own web theme. Setting up Netlify CMS together with a Netlify account can feel a bit circumstantial. But having a CMS experience makes adding content a lot easier. Because we have used a flat-file headless CMS we can easily switch from the CMS system. Perhaps in the future we would have a CMS built using .NET Blazor, that would be really awesome! </p>
+<p>Please let me know if you found this blog helpful or have any questions. Happy coding!</p>
 
 
 
