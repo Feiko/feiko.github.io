@@ -198,7 +198,7 @@
  </p>
 <p>Now your code is in GitHub we will have to add some magic to hook up the NetlifyCMS. For this we first need to set up a Netlify site (we are not going to use this site… complicated I know. And, ‘Yes I wish there was a better way…’)</p>
 <p>But first, now we are in GitHub, let’s do some plumbing for our GitHub page. Create a new public repository on your GitHub and name this repository <YourGithubName>.github.io. This will also be the domain where your website is hosted. Next we need to hook up your code to automatically deploy to this GitHub Page. Go inside the newly created Page repo and go to the ‘Settings’ tap and select 'Pages'. Press ‘Choose a theme’ and select the first theme and press ‘Select theme’. This will generate a branch called ‘gh-pages’ where the selected theme will deploy. Don’t worry we are going to overwrite this default theme with our own awesome static website.</p>
-<p>If you know go to the ‘Pages’ section in your repo ‘Settings’, you should see in green ‘Your site is published at https://&lt;YourGithubName&gt;.github.io/’. If it says published at https://&lt;YourGithubName&gt;.github.io/<RepoName>/’ then you did not name your repo correctly &lt;YourGithubName&gt;.github.io. This will not work because the blog site expects to be published inside the root of your website domain!
+<p>If you know go to the ‘Pages’ section in your repo ‘Settings’, you should see in green ‘Your site is published at https://<YourGithubName>.github.io/’. If it says published at https://<YourGithubName>.github.io/<RepoName>/’ then you did not name your repo correctly <YourGithubName>.github.io. This will not work because the blog site expects to be published inside the root of your website domain!
 <br />
  
 <br />
@@ -283,7 +283,7 @@ namespace StaticBlogExample
 <p>The last step is to create a GitHub Action that will run the website generator every time you update your website using your CMS or checking in some new code.</p>
 <p>Go to GitHub and open the Repo with your site generator code (not your GitHub Page repo). Open the tab ‘Actions’ and click ‘set up a workflow yourself -&gt;’.</p>
 <p>Replace the code inside the editor with the following script:</p>
-<pre><code class="language-yaml">name: Publish GitHub_Page
+<pre><code class="language-cmake">name: Publish GitHub_Page
 
 on:
   push:
@@ -305,7 +305,7 @@ jobs:
         PAGE_TOKEN: ${{ secrets.PAGE_TOKEN }}
 </code></pre>
 <p>Then press the green ‘start commit’ button. Finally we need to generate an authorization token that will allow Actions to deploy to GitHub Pages. Go to the ‘settings’ tap of your site-generator-repo and in your left menu select ‘Secrets’ to create a secret for your GitHub commit token. Click ‘New repository secret’. Name this secret ‘PAGE_TOKEN', inside the ‘Value’ paste the token you generated earlier. Now press ‘Add secret’ and voila your token is stored securely inside your GitHub Repo.</p>
-<p>To kick off the action and deploy your site the first time you need to make a Git commit to your website. The easiest way to do this is by creating a readme.md inside the root of your site generator repo in Github. This commit will kick off the action. You can see your action status in the GitHub ‘action’ tab. After your Action has run successfully, you see your static blog at https://&lt;YourGithubName&gt;.github.io/. From now on all changes you make inside your CMS https://&lt;YourGithubName&gt;.github.io/admin/, will be committed to the GitHub websiteGenerator repo. This will kick off the action and update your website. </p>
+<p>To kick off the action and deploy your site the first time you need to make a Git commit to your website. The easiest way to do this is by creating a readme.md inside the root of your site generator repo in Github. This commit will kick off the action. You can see your action status in the GitHub ‘action’ tab. After your Action has run successfully, you see your static blog at https://<YourGithubName>.github.io/. From now on all changes you make inside your CMS https://<YourGithubName>.github.io/admin/, will be committed to the GitHub websiteGenerator repo. This will kick off the action and update your website. </p>
 <p>And now you're <strong>done</strong>! Congratulations, how cool! You see, now all .NET geeks can blog like Scott Hanselman! I can’t wait for you to share your knowledge with the world.</p>
 <p>If you want to create a more special website like myself, you can create your own theme or reuse a theme you already have. Be sure to check out the documentation on <a href="https://statiq.dev/web/">https://statiq.dev/web/</a>, also look at the documentation of Netlify CMS on <a href="https://www.netlifycms.org/docs/configuration-options/">how to configure your config.yml file</a>. Happy coding!
 <br />
