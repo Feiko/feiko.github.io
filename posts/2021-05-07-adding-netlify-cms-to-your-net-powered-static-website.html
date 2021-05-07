@@ -207,8 +207,30 @@
 <br />
  </p>
 <p>To set up Netlify CMS follow the first two steps ‘creating an GitHub OAuth App’ and ‘Creating a Netlify Site’ from the following <a href="https://cnly.github.io/2018/04/14/just-3-steps-adding-netlify-cms-to-existing-github-pages-site-within-10-minutes.html">great blog</a>.</p>
-<p>Now we can add the <em>config.yml</em> to <em>/input/admin</em> directory inside your code. This is the heart of the Netlify CMS. You can download my <em>config.yml</em> from my <a href="https://github.com/Feiko/StaticBlogExample/blob/master/input/admin/config.yml">GitHub Repo</a>. I’ve gone ahead and configured this <em>config.yml</em> file for you. You only have to change the backend settings inside the <em>config.yml</em> to target the GitHub Repo where your site generator lives (so not your GitHub Pages Repo). So change ‘repo:  &lt;GitHubName&gt;/&lt;RepoName&gt;‘  i.e.  feiko/StaticBlogExample. Also change the site domain 'site_domain'  to the &lt;SiteName&gt;.netlify.app  you just created when configuring Netlify. If you use a different branch then ‘master’ please also change this setting.</p>
+<p>Now we can add the <em>config.yml</em> to <em>/input/admin</em> directory inside your code. This is the heart of the Netlify CMS. You can download my <em>config.yml</em> from my <a href="https://github.com/Feiko/StaticBlogExample/blob/master/input/admin/config.yml">GitHub Repo</a>. I’ve gone ahead and configured this <em>config.yml</em> file for you. You only have to change the backend settings inside the <em>config.yml</em> to target the GitHub Repo where your site generator lives (so not your GitHub Pages Repo). So change ‘repo:  <GitHubName>/<RepoName>‘  i.e.  feiko/StaticBlogExample. Also change the site domain 'site_domain'  to the <SiteName>.netlify.app  you just created when configuring Netlify. If you use a different branch then ‘master’ please also change this setting.</p>
 <p>Go ahead and git commit and push this <em>config.yml</em> to GitHub. Now you can preview the site locally using the <code>dotnet run -- preview</code> command (see Part I) and browse to ‘localhost:5080/admin’. You should be able to log into your CMS using your GitHub credentials.</p>
+<p>Now you can write a blog or page in the CMS. Netlify will automatically commit your new content to your remote GitHub repo. To preview the changes locally, you need to ‘git pull’ the content from your remote repo. Run the preview site and enjoy your freshly written blog… locally…</p>
+<p><em><strong>Note:</strong></em></p>
+<blockquote>
+<p>Don’t forget to commit and push your local changes to GitHub. You can &gt;also add the /output folder to the .gitignore file so you don’t keep &gt;pushing and pulling these changes.</p>
+</blockquote>
+<p><em><strong>Note:</strong></em></p>
+<blockquote>
+<p>If the admin page is displayed malformed mixed with CleanBlog theme &gt;elements. Then we need to tell Statiq to ignore the <em>admin</em> directory. &gt;If everything looks okay, then ignore this step.</p>
+</blockquote>
+<blockquote>
+<p>To tell Statiq to ignore the <em>/input/admin</em> directory you can insert &gt;the following code to <em>program.cs</em> after ‘.CreateWeb(args)’.</p>
+</blockquote>
+<pre><code class="language-csharp">.AddSetting(WebKeys.ExcludedPaths,
+            	new List&lt;NormalizedPath&gt;
+            	{
+                	new NormalizedPath(&quot;input/admin&quot;),
+            	})
+</code></pre>
+<p><br />
+ 
+<br />
+ </p>
 
 
 
