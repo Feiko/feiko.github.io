@@ -1,4 +1,4 @@
-
+﻿
 
 
 
@@ -161,9 +161,54 @@
 <li>The Netlify CMS that uses Netlify to update your markdown content on GitHub</li>
 <li>A GitHub Actions attached to your site generator that will automatically update your website</li>
 </ul>
-<p>Let’s get started and pick up where we left off in Part I. You can also look into my <a href="https://github.com/Feiko/StaticBlogExample">example repo</a> on my GitHub.</p>
+<p>Let’s get started and pick up where we left off in Part I. You can also look into my <a href="https://github.com/Feiko/StaticBlogExample">example repo</a> on my GitHub.
+<br />
+ 
+<br />
+ </p>
 <h3 id="step-1-adding-the-netlify-cms-and-github-repos"><strong>Step 1 -</strong> Adding the Netlify CMS and GitHub repos</h3>
-<p>By this time we are going to move forward and add Netlify CMS so we can add and manage our blogs in a friendly manner. Open the project you created in Part I and create an ‘admin’ directory inside the ‘input’ directory. In this directory we create an index.html file with the following magic Netlify CMS code:</p>
+<p><br />
+ </p>
+<p>We start by adding Netlify CMS so we can add and manage our content in a friendly manner. Open the project you created in Part I and create an <em>admin</em> directory inside the <em>input</em> directory. In this directory we create an <em>index.html</em> file with the following magic Netlify CMS code:</p>
+<pre><code class="language-html">ShouldOutput: true
+---
+&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot; /&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+  &lt;title&gt;Content Manager&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;!-- Include the script that builds the page and powers Netlify CMS --&gt;
+  &lt;script src=&quot;https://unpkg.com/netlify-cms&#64;^2.0.0/dist/netlify-cms.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>Now we are going to push our code to a new GitHub repo on your GitHub. We can easily do this in the latest version of VS2019 using ‘Git Changes’. Make sure you give your repository a meaningful name like ‘MyWebSiteGenerator’. Please don’t tell me you don’t have a GitHub account!!! Shame on you, you call yourself a developer 😜 ???</p>
+<figure>
+  <img src="/images/create-github-repo-with-vs2019.png" alt="Create GitHub Repo using VS2019" class="img-fluid" title="Create GitHub Repo using VS2019" />
+</figure>
+<p><br />
+ 
+<br />
+ </p>
+<h3 id="step-2-registering-your-github-page"><strong>Step 2 -</strong> Registering your GitHub Page###</h3>
+<p><br />
+ </p>
+<p>Now your code is in GitHub we will have to add some magic to hook up the NetlifyCMS. For this we first need to set up a Netlify site (we are not going to use this site… complicated I know. And, ‘Yes I wish there was a better way…’)</p>
+<p>But first, now we are in GitHub, let’s do some plumbing for our GitHub page. Create a new public repository on your GitHub and name this repository <YourGithubName>.github.io. This will also be the domain where your website is hosted. Next we need to hook up your code to automatically deploy to this GitHub Page. Go inside the newly created Page repo and go to the ‘Settings’ tap and select 'Pages'. Press ‘Choose a theme’ and select the first theme and press ‘Select theme’. This will generate a branch called ‘gh-pages’ where the selected theme will deploy. Don’t worry we are going to overwrite this default theme with our own awesome static website.</p>
+<p>If you know go to the ‘Pages’ section in your repo ‘Settings’, you should see in green ‘Your site is published at https://<YourGithubName>.github.io/’. If it says published at https://<YourGithubName>.github.io/<RepoName>/’ then you did not name your repo correctly <YourGithubName>.github.io. This will not work because the blog site expects to be published inside the root of your website domain!
+<br />
+ 
+<br />
+ </p>
+<p>Step 3 - Setup Netlify CMS
+<br />
+ </p>
+<p>To set up Netlify CMS follow the first two steps ‘creating an GitHub OAuth App’ and ‘Creating a Netlify Site’ from the following <a href="https://cnly.github.io/2018/04/14/just-3-steps-adding-netlify-cms-to-existing-github-pages-site-within-10-minutes.html">great blog</a>.</p>
+<p>Now we can add the <em>config.yml</em> to <em>/input/admin</em> directory inside your code. This is the heart of the Netlify CMS. You can download my <em>config.yml</em> from my <a href="https://github.com/Feiko/StaticBlogExample/blob/master/input/admin/config.yml">GitHub Repo</a>. I’ve gone ahead and configured this <em>config.yml</em> file for you. You only have to change the backend settings inside the <em>config.yml</em> to target the GitHub Repo where your site generator lives (so not your GitHub Pages Repo). So change ‘repo:  &lt;GitHubName&gt;/&lt;RepoName&gt;‘  i.e.  feiko/StaticBlogExample. Also change the site domain 'site_domain'  to the &lt;SiteName&gt;.netlify.app  you just created when configuring Netlify. If you use a different branch then ‘master’ please also change this setting.</p>
+<p>Go ahead and git commit and push this <em>config.yml</em> to GitHub. Now you can preview the site locally using the <code>dotnet run -- preview</code> command (see Part I) and browse to ‘localhost:5080/admin’. You should be able to log into your CMS using your GitHub credentials.</p>
 
 
 
