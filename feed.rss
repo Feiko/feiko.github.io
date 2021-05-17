@@ -6,8 +6,66 @@
 		<description>Feiko's personal site about everything IoT and Tech</description>
 		<copyright>Copyright © 2021</copyright>
 		<managingEditor>Feiko Gorter</managingEditor>
-		<pubDate>Mon, 17 May 2021 18:53:39 GMT</pubDate>
-		<lastBuildDate>Mon, 17 May 2021 18:53:39 GMT</lastBuildDate>
+		<pubDate>Mon, 17 May 2021 19:12:32 GMT</pubDate>
+		<lastBuildDate>Mon, 17 May 2021 19:12:32 GMT</lastBuildDate>
+		<item>
+			<title>NanoFramework - C# for microcontrollers with 64k ram</title>
+			<link>http://feiko.io/posts/2021-05-17-nanoframework-c-for-microcontrollers-with-64k-ram</link>
+			<description>NanoFramework brings C# .NET to microcontrollers. Giving developers the best embedded experience and making IoT easy! </description>
+			<enclosure url="http://feiko.io/images/nanoframework.png" length="0" type="image" />
+			<guid>http://feiko.io/posts/2021-05-17-nanoframework-c-for-microcontrollers-with-64k-ram</guid>
+			<pubDate>Mon, 17 May 2021 20:00:00 GMT</pubDate>
+			<content:encoded>&lt;p&gt;A lot of you may probably think ‘.NET nano... what now? I’ve never heard Scott Guthrie or Scott Hanselman talking about this nanoFramework during Microsoft build conference?’. You're right, and in my humble opinion they should start talking about this amazing framework because it has a great role to fulfill in the Internet of Things domain, especially for Microsoft.   
+&lt;br /&gt;
+ 
+&lt;br /&gt;
+ &lt;/p&gt;
+&lt;h3 id="micro-framework-is-dead-long-live-nanoframework"&gt;Micro Framework is dead, Long live nanoFramework!&lt;/h3&gt;
+&lt;p&gt;&lt;br /&gt;
+ &lt;/p&gt;
+&lt;p&gt;You could look at .NET nanoframework as the bastard C# son in the .NET world. nanoFramework is the direct descendant of the .NET Micro Framework. Micro Framework released in 2007 is a high level C# programming language for small devices with 256kb of ram and 512kb of flash. Released in a time nobody had even heard of the term IoT, the Micro Framework, was far ahead of its time. Although 256kb of ram may not sound like much, Micro Controllers with these amounts of memory were still quite expensive back in those days. Although Micro Framework made a promising start and had a great active community, the framework slowly lost terrain to other embedded microcontroller frameworks. While the rest of the .NET framework pushed on, Micro Framework was left behind.    &lt;/p&gt;
+&lt;p&gt;Since 2007, the IT world has radically changed. With Cloud and smart phones, a whole new world and IT landscape took shape. This enabled the Internet of Things revolution. In the wake of this revolution, also grew the need for making development of these ‘things’ easy. Soon new high-level programming languages emerged, like MicroPython, Espruino (Javascript), TinyGo (Golang) and others. Although the Micro Framework was left behind, it was not forgotten. In 2017 a small group headed by José Simoes, started work on the new .NET nanoFramework. Salvaging what they could from the old deprecated Micro Framework and starting anew. They squeezed C# into systems with only 64kb of ram and 256kb of flash, making it truly ‘nano’, a monumental achievement.     
+&lt;br /&gt;
+ 
+&lt;br /&gt;
+ &lt;/p&gt;
+&lt;h3 id="why-nanoframework"&gt;Why nanoFramework&lt;/h3&gt;
+&lt;p&gt;&lt;br /&gt;
+ &lt;/p&gt;
+&lt;p&gt;Until 2007 developing embedded software for small microcontrollers was a laborious task, requiring you to write low level C or C++. Still, today writing C++ is a very viable and cost effective solution if you are planning on producing thousands of devices. Using higher programming languages on microcontrollers usually comes with a performance penalty. Meaning you have to use more capable microcontrollers, therefore, being more expensive and often less power efficient. This being said, the cost of purchasing a more powerful microcontroller has come down from many tens of dollars to sometimes a few dollars or less. These are devices that often already have WiFi, Bluetooth or other connectivity integrated in their silicon. These devices are very flexible and great for prototyping because they are so easy to program. I even use these devices in production environments. &lt;/p&gt;
+&lt;p&gt;Though Micro Framework was unique in 2007, today you can choose from several alternatives. There are several reasons I think nanoFramework is the most superior platform to date:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;With nanoFramework you can write C#. What more convincing do you need? If it’s good enough for Bill Gates, it should be good enough for you!&lt;/li&gt;
+&lt;li&gt;nanoFramework is mostly compatible with your normal .Net, a lot of libraries just run out of the box. &lt;/li&gt;
+&lt;li&gt;Full Visual Studio support with complete Intellisense. &lt;/li&gt;
+&lt;li&gt;Full debugging experience. Set breakpoints, step into, over, conditional breakpoints. Just attach your device, hit F5 and off you go!&lt;/li&gt;
+&lt;li&gt;Unit testing&lt;/li&gt;
+&lt;li&gt;Combine managed C# together with unmanaged C++&lt;/li&gt;
+&lt;li&gt;Open Source&lt;/li&gt;
+&lt;li&gt;Great active community.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Specially the full Visual Studio IDE experience together with testing and debugging sets nanoFramework apart from the rest. In other higher languages you almost always have to write debug information to the console out. This makes debugging complex applications very hard. NanoFramework’s ability to set breakpoints dynamically reduces development time by a lot and minimizes frustration. &lt;/p&gt;
+&lt;p&gt;Although nanoFramework is very usable for production today, it’s still actively under development. Features and libraries are constantly being added. The nanoFramework team is really moving mountains with all the work they're doing. You can do a lot of great stuff like build a small webserver or use the AMQP library to connect to Azure IoT Hub. The greatest pain is not having generics and therefore also missing out on stuff like Tasks and async/await. Having to deal with non generic lists and some hardcore threading can sometimes feel like the .NET 1.0 stone age (it can also be fun and good practice). However, I have it from a very reliable source that generics and async/await are just around the corner!
+&lt;br /&gt;
+ 
+&lt;br /&gt;
+ &lt;/p&gt;
+&lt;h3 id="final-thoughts"&gt;Final Thoughts&lt;/h3&gt;
+&lt;p&gt;&lt;br /&gt;
+ &lt;/p&gt;
+&lt;p&gt;NanoFramework is still mostly unknown to the .NET and embedded system developers. This is a shame, because if you are working with domotics or IoT, slaving away on your C++ skills or frustrated about bad debug experience, nanoFramework is just the thing for you. If you know C# and want to start with devices, why not pick up a 4 dollar ESP32 or other compatible board and get started today? You can join nanoFramework on discord and contribute on GitHub. In one of my next posts I will talk about using the Websockets library on nanoFramework. A library I have been working on for some time. Showcasing how cool and powerful C# on devices can be. &lt;/p&gt;
+&lt;p&gt;Finally, I really hope Microsoft will open their hearts to their bastard sibling and let nanoFramework in. NanoFramework can really make Microsoft Azure IoT much simpler. Creating the ability to share code between your embedded device and IoT backend. Think about it: why should IoT be more difficult than building an ASP.NET site or an WPF application? It’s time for the next step in the Microsoft IoT revolution. &lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;
+ 
+&lt;strong&gt;Useful links&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://docs.nanoframework.net/content/getting-started-guides/getting-started-managed.html"&gt;Getting Started with nanoFramework&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.nanoframework.net/"&gt;NanoFramework Homepage&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://discord.com/invite/gCyBu8T"&gt;Discord support for nanoFramework&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
+		</item>
 		<item>
 			<title>Adding Netlify CMS to your .NET powered static Website</title>
 			<link>http://feiko.io/posts/2021-05-07-adding-netlify-cms-to-your-net-powered-static-website</link>
