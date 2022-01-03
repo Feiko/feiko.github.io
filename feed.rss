@@ -6,8 +6,26 @@
 		<description>Feiko's personal site about everything IoT and Tech</description>
 		<copyright>Copyright © 2022</copyright>
 		<managingEditor>Feiko Gorter</managingEditor>
-		<pubDate>Mon, 03 Jan 2022 13:56:39 GMT</pubDate>
-		<lastBuildDate>Mon, 03 Jan 2022 13:56:39 GMT</lastBuildDate>
+		<pubDate>Mon, 03 Jan 2022 14:14:36 GMT</pubDate>
+		<lastBuildDate>Mon, 03 Jan 2022 14:14:36 GMT</lastBuildDate>
+		<item>
+			<title>Getting started with .NET nanoFramework</title>
+			<link>http://feiko.io/posts/2022-01-03-getting-started-with-net-nanoframework</link>
+			<description>Getting Started with .NET nanoFramework, C# for microcontrollers, using an ESP32 microcontroller and Visual Studio.</description>
+			<guid>http://feiko.io/posts/2022-01-03-getting-started-with-net-nanoframework</guid>
+			<pubDate>Fri, 31 Dec 2021 15:05:28 GMT</pubDate>
+			<content:encoded>&lt;p&gt;In this video I'll show you how to get started with .NET nanoFramework, C# for microcontrollers. Just get yourself a cheap ESP32 microcontroller and follow along!&lt;/p&gt;
+&lt;p&gt;In this video I used the following resources:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://docs.nanoframework.net/content/getting-started-guides/getting-started-managed.html"&gt;nanoFramework documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/nanoframework"&gt;Github nanoFramework&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://visualstudio.microsoft.com/vs/"&gt;Visual Studio 2022&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.espressif.com/en/products/socs/esp32"&gt;ESP32&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers"&gt;ESP32 USB driver&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
+		</item>
 		<item>
 			<title>NanoFramework - C# for microcontrollers with 64k ram</title>
 			<link>http://feiko.io/posts/2021-05-17-nanoframework-c-for-microcontrollers-with-64k-ram</link>
