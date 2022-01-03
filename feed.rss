@@ -6,14 +6,14 @@
 		<description>Feiko's personal site about everything IoT and Tech</description>
 		<copyright>Copyright © 2022</copyright>
 		<managingEditor>Feiko Gorter</managingEditor>
-		<pubDate>Mon, 03 Jan 2022 14:14:36 GMT</pubDate>
-		<lastBuildDate>Mon, 03 Jan 2022 14:14:36 GMT</lastBuildDate>
+		<pubDate>Mon, 03 Jan 2022 14:35:15 GMT</pubDate>
+		<lastBuildDate>Mon, 03 Jan 2022 14:35:15 GMT</lastBuildDate>
 		<item>
 			<title>Getting started with .NET nanoFramework</title>
 			<link>http://feiko.io/posts/2022-01-03-getting-started-with-net-nanoframework</link>
 			<description>Getting Started with .NET nanoFramework, C# for microcontrollers, using an ESP32 microcontroller and Visual Studio.</description>
 			<guid>http://feiko.io/posts/2022-01-03-getting-started-with-net-nanoframework</guid>
-			<pubDate>Fri, 31 Dec 2021 15:05:28 GMT</pubDate>
+			<pubDate>Mon, 03 Jan 2022 14:19:42 GMT</pubDate>
 			<content:encoded>&lt;p&gt;In this video I'll show you how to get started with .NET nanoFramework, C# for microcontrollers. Just get yourself a cheap ESP32 microcontroller and follow along!&lt;/p&gt;
 &lt;p&gt;In this video I used the following resources:&lt;/p&gt;
 &lt;ul&gt;
