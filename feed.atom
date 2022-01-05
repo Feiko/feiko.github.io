@@ -7,12 +7,12 @@
 	</author>
 	<link rel="self" href="https://www.feiko.io/" />
 	<rights>Copyright © 2022</rights>
-	<updated>2022-01-05T13:52:57Z</updated>
+	<updated>2022-01-05T13:59:29Z</updated>
 	<subtitle>Feiko's personal site about everything IoT and Tech</subtitle>
 	<entry>
-		<id>http://feiko.io/posts/2022-01-03-getting-started-with-net-nanoframework</id>
+		<id>http://www.feiko.io/posts/2022-01-03-getting-started-with-net-nanoframework</id>
 		<title>Getting started with .NET nanoFramework</title>
-		<link href="http://feiko.io/posts/2022-01-03-getting-started-with-net-nanoframework" />
+		<link href="http://www.feiko.io/posts/2022-01-03-getting-started-with-net-nanoframework" />
 		<updated>2022-01-03T14:19:42Z</updated>
 		<content>&lt;p&gt;In this video I'll show you how to get started with .NET nanoFramework, C# for microcontrollers. Just get yourself a cheap ESP32 microcontroller and follow along!&lt;/p&gt;
 &lt;p&gt;In this video I used the following resources:&lt;/p&gt;
@@ -27,10 +27,10 @@
 		<summary>Getting Started with .NET nanoFramework, C# for microcontrollers, using an ESP32 microcontroller and Visual Studio.</summary>
 	</entry>
 	<entry>
-		<id>http://feiko.io/posts/2021-05-17-nanoframework-c-for-microcontrollers-with-64k-ram</id>
+		<id>http://www.feiko.io/posts/2021-05-17-nanoframework-c-for-microcontrollers-with-64k-ram</id>
 		<title>NanoFramework - C# for microcontrollers with 64k ram</title>
-		<link href="http://feiko.io/posts/2021-05-17-nanoframework-c-for-microcontrollers-with-64k-ram" />
-		<link rel="enclosure" type="image" href="http://feiko.io/images/nanoframework.png" />
+		<link href="http://www.feiko.io/posts/2021-05-17-nanoframework-c-for-microcontrollers-with-64k-ram" />
+		<link rel="enclosure" type="image" href="http://www.feiko.io/images/nanoframework.png" />
 		<updated>2021-05-17T20:00:00Z</updated>
 		<content>&lt;p&gt;A lot of you may probably think ‘.NET nano... what now? I’ve never heard Scott Guthrie or Scott Hanselman talking about this nanoFramework during Microsoft build conference?’. You're right, and in my humble opinion they should start talking about this amazing framework because it has a great role to fulfill in the Internet of Things domain, especially for Microsoft.   
 &lt;br /&gt;
@@ -84,10 +84,10 @@
 		<summary>NanoFramework brings C# .NET to microcontrollers. Giving developers the best embedded experience and making IoT easy! </summary>
 	</entry>
 	<entry>
-		<id>http://feiko.io/posts/2021-05-07-adding-netlify-cms-to-your-net-powered-static-website</id>
+		<id>http://www.feiko.io/posts/2021-05-07-adding-netlify-cms-to-your-net-powered-static-website</id>
 		<title>Adding Netlify CMS to your .NET powered static Website</title>
-		<link href="http://feiko.io/posts/2021-05-07-adding-netlify-cms-to-your-net-powered-static-website" />
-		<link rel="enclosure" type="image" href="http://feiko.io/images/netlify-cms-example.png" />
+		<link href="http://www.feiko.io/posts/2021-05-07-adding-netlify-cms-to-your-net-powered-static-website" />
+		<link rel="enclosure" type="image" href="http://www.feiko.io/images/netlify-cms-example.png" />
 		<updated>2021-05-07T16:53:38Z</updated>
 		<content>&lt;p&gt;This is part II of the series about creating your own .NET powered static website. Here you can find part I: &lt;a href="https://www.feiko.io/posts/2021-04-30-create-your-own-net-powered-website-for-free"&gt;Create your own .net powered static website for FREE&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;In this tutorial we are going to use NetlifyCMS. Netlify CMS is a flat-file headless CMS. Flat-file means that content is saved to simple files rather than using a database like SQL or MongoDB. In our case, these are Markdown files. A headless CMS is a Content Management System that is completely detached and unaware of any backend systems used to generate your website. This differs completely from the systems we know from the ASP.NET world. A traditional CMS like Umbraco is completely built on top of ASP.NET MVC and uses a SQL database. The content management and public website are very much intertwined and done by the same hosting platform.&lt;/p&gt;
@@ -257,10 +257,10 @@ jobs:
 		<summary>Create an .net powered website for free using Github Pages, Statiq.web and Netlify CMS - Part II</summary>
 	</entry>
 	<entry>
-		<id>http://feiko.io/posts/2021-04-30-create-your-own-net-powered-website-for-free</id>
+		<id>http://www.feiko.io/posts/2021-04-30-create-your-own-net-powered-website-for-free</id>
 		<title>Create your own .net powered static website for FREE</title>
-		<link href="http://feiko.io/posts/2021-04-30-create-your-own-net-powered-website-for-free" />
-		<link rel="enclosure" type="image" href="http://feiko.io/images/computer-code_awxc4nofzn.jpg" />
+		<link href="http://www.feiko.io/posts/2021-04-30-create-your-own-net-powered-website-for-free" />
+		<link rel="enclosure" type="image" href="http://www.feiko.io/images/computer-code_awxc4nofzn.jpg" />
 		<updated>2021-05-01T11:00:45Z</updated>
 		<content>&lt;p&gt;Blog like Scott Hanselman. What self-respecting .net developer has not thought about writing their own blogs? I certainly have. As an Internet of Things Specialist and .net developer, I have embarked on many IT adventures over the years. Adventures of lessons learned, amusement, frustrations and wins that I’d love to share with the world. Being a non-native English-speaking dyslexic has held me from doing this, but no longer! With this blog about creating a 100% .NET powered static website for free, I’m officially launching my own blog and video website. Feiko.IO says: “HELLO WORLD!!!”&lt;/p&gt;
 &lt;p&gt;When I decided to start a blog website, I soon found out that hosting a cool Umbraco powered WEB app on Azure is quite expensive for a small site. The cheapest usable Web App tier would set me back 46 euro a month. This is way too much for this stubborn, lazy, cheap ass developer. So I decided that ASP.NET is a no go.&lt;/p&gt;
