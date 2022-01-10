@@ -4,9 +4,16 @@
     border-radius: 2px
 }
 
-.video-box{
+.video-box-square{
     width:180px;
     height:180px;
+    background-color: black;
+    position: relative;
+}
+
+.video-box-wide {
+    width: 180px;
+    height: 135px;
     background-color: black;
     position: relative;
 }

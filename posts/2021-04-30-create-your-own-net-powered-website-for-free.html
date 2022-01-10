@@ -5,111 +5,107 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:og="http://ogp.me/ns#" lang="en">
-<head>
-    <title>Feiko.IO - Create your own .net powered static website for FREE</title>
+    <head>
+        <title>Feiko.IO - Create your own .net powered static website for FREE</title>
 
-    <!-- Meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Feiko Gorter">
-    <meta property="og:site_name" content="Feiko.IO">
-    <meta name="application-name" content="Feiko.IO" />
-    <meta name="msapplication-tooltip" content="Feiko.IO" />
-    <meta name="msapplication-starturl" content="http://www.feiko.io/" />
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Feiko Gorter">
+        <meta property="og:site_name" content="Feiko.IO">
+        <meta name="application-name" content="Feiko.IO" />
+        <meta name="msapplication-tooltip" content="Feiko.IO" />
+        <meta name="msapplication-starturl" content="http://www.feiko.io/" />
 
-    <meta name="twitter:site" content="@feikogorter">
-    <meta name="twitter:creator" content="@feikogorter">
-    <meta name="twitter:title" content="Feiko.IO - Create your own .net powered static website for FREE">
-    <meta property="og:title" content="Feiko.IO - Create your own .net powered static website for FREE" />
+        <meta name="twitter:site" content="@feikogorter">
+        <meta name="twitter:creator" content="@feikogorter">
+        <meta name="twitter:title" content="Feiko.IO - Create your own .net powered static website for FREE">
+        <meta property="og:title" content="Feiko.IO - Create your own .net powered static website for FREE" />
 
-            <meta property='og:description' content="Create an .net powered website for free using Github Pages, Statiq.web and NetlifyCMS - Part I" />
-            <meta name="description" content="Create an .net powered website for free using Github Pages, Statiq.web and NetlifyCMS - Part I">
-            <meta name="twitter:description" content="Create an .net powered website for free using Github Pages, Statiq.web and NetlifyCMS - Part I">
-            <meta name="twitter:card" content="summary_large_image">
-            <meta property="og:url" content="http://www.feiko.io/posts/2021-04-30-create-your-own-net-powered-website-for-free" />
-            <meta name="twitter:card" content="summary_large_image">
-            <meta name="twitter:image" content="http://www.feiko.io/images/computer-code_awxc4nofzn.jpg">
-            <meta property="og:image" content="http://www.feiko.io/images/computer-code_awxc4nofzn.jpg" />
-            <meta property="og:type" content="article" />
-            <meta name="publish_date" property="og:article:published_time" content="05/01/2021 11:00" />
-            <meta name="author" property="og:article:author" content="Feiko Gorter" />
-            <meta property="og:section" content="Technology" />
-                <meta property="og:article:tag" content="Web" />
-                <meta property="og:article:tag" content="Static" />
-                <meta property="og:article:tag" content="Tutorial" />
-                <meta property="og:article:tag" content=".NET" />
-                <meta property="og:article:tag" content="Blog" />
+        <meta property='og:description' content="Create an .net powered website for free using Github Pages, Statiq.web and NetlifyCMS - Part I" />
+        <meta name="description" content="Create an .net powered website for free using Github Pages, Statiq.web and NetlifyCMS - Part I">
+        <meta name="twitter:description" content="Create an .net powered website for free using Github Pages, Statiq.web and NetlifyCMS - Part I">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta property="og:url" content="http://www.feiko.io/posts/2021-04-30-create-your-own-net-powered-website-for-free" />
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:image" content="http://www.feiko.io/images/computer-code_awxc4nofzn.jpg">
+        <meta property="og:image" content="http://www.feiko.io/images/computer-code_awxc4nofzn.jpg" />
+        <meta property="og:type" content="article" />
+        <meta name="publish_date" property="og:article:published_time" content="01/05/2021 13:00" />
+        <meta name="author" property="og:article:author" content="Feiko Gorter" />
+        <meta property="og:section" content="Technology" />
+        <meta property="og:article:tag" content="Web" />
+        <meta property="og:article:tag" content="Static" />
+        <meta property="og:article:tag" content="Tutorial" />
+        <meta property="og:article:tag" content=".NET" />
+        <meta property="og:article:tag" content="Blog" />
 
-    <link rel="shortcut icon" href="/favicon.ico">
+        <link rel="shortcut icon" href="/favicon.ico">
 
-    <!-- FontAwesome JS-->
-    <script defer src=/fontawesome/js/all.min.js></script>
+        <!-- FontAwesome JS-->
+        <script defer src=/fontawesome/js/all.min.js></script>
 
-    <!-- Theme CSS -->
-    <link id="theme-style" rel="stylesheet" href=/css/theme-5.css>
-    <link id="theme-style" rel="stylesheet" href=/css/site.css>
+        <!-- Theme CSS -->
+        <link id="theme-style" rel="stylesheet" href=/css/theme-5.css>
+        <link id="theme-style" rel="stylesheet" href=/css/site.css>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/monokai-sublime.min.css">
 
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/monokai-sublime.min.css">
+    </head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LY52GT5EFK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-</head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LY52GT5EFK"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+    <body>
 
-    gtag('config', 'GA_MEASUREMENT_ID');
-</script>
-<body>
+        <!-- Page Header -->
+        
 
-    <!-- Page Header -->
-    
+        <header class="header text-center">
+            <h1 class="blog-name d-inline-flex pt-lg-4"><a href="/">Feiko.IO</a></h1>
 
-
-
-<header class="header text-center">
-    <h1 class="blog-name d-inline-flex pt-lg-4"><a href="/">Feiko.IO</a></h1>
-
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
 
-        <div id="navigation" class="collapse navbar-collapse flex-column">
-            <div class="profile-section pt-3 pt-lg-0">
-                <img class="profile-image mb-3 rounded-circle mx-auto" src="/images/feiko-gorter.png" alt="image">
+                <div id="navigation" class="collapse navbar-collapse flex-column">
+                    <div class="profile-section pt-3 pt-lg-0">
+                        <img class="profile-image mb-3 rounded-circle mx-auto" src="/images/feiko-gorter.png" alt="image">
+                        <div class="bio mb-3">
+                            <p>Hi, I'm Feiko Gorter, an IoT specialist, inventor, speaker, dyslexic and .net geek. Welcome to my personal site about everything IoT and Tech.</p>
 
-                <div class="bio mb-3">
-                    <p>Hi, I'm Feiko Gorter, an IoT specialist, inventor, speaker, dyslexic and .net geek. Welcome to my personal site about everything IoT and Tech.</p>
-
-                </div><!--//bio-->
+                        </div><!--//bio-->
                         <ul class="social-list list-inline py-3 mx-auto">
-                                <li class="list-inline-item"><a href="https://www.linkedin.com/in/feikogorter"><i class="fab fa-linkedin fa-fw"></i></a></li>
-                                <li class="list-inline-item"><a href="https://github.com/feiko"><i class="fab fa-github fa-fw"></i></a></li>
-                                <li class="list-inline-item"><a href="https://www.youtube.com/channel/UCBX8mmVnL-juQWjOPwZSrTQ"><i class="fab fa-youtube fa-fw"></i></a></li>
-                                <li class="list-inline-item"><a href="https://twitter.com/feikogorter"><i class="fab fa-twitter fa-fw"></i></a></li>
+                            <li class="list-inline-item"><a href="https://www.linkedin.com/in/feikogorter"><i class="fab fa-linkedin fa-fw"></i></a></li>
+                            <li class="list-inline-item"><a href="https://github.com/feiko"><i class="fab fa-github fa-fw"></i></a></li>
+                            <li class="list-inline-item"><a href="https://www.youtube.com/channel/UCBX8mmVnL-juQWjOPwZSrTQ"><i class="fab fa-youtube fa-fw"></i></a></li>
+                            <li class="list-inline-item"><a href="https://twitter.com/feikogorter"><i class="fab fa-twitter fa-fw"></i></a></li>
                         </ul><!--//social-list-->
 
 
-                <ul class="navbar-nav flex-column text-left">
-                    <li class="nav-item ">
-                        <a class="nav-link" href="/"><i class="fas fa-home fa-fw mr-2"></i>Home <span class="sr-only">(current)</span></a>
-                    </li>
+                        <ul class="navbar-nav flex-column text-left">
+                            <li class="nav-item ">
+                                <a class="nav-link" href="/"><i class="fas fa-home fa-fw mr-2"></i>Home <span class="sr-only">(current)</span></a>
+                            </li>
                             <li class="nav-item  ">
                                 <a class="nav-link" href="/about-me"><i class="fas fa-user fa-fw mr-2"></i>About Me</a>
                             </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="/tags"><i class="fas fa-tags fa-fw mr-2"></i>Tags </a>
-                    </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="/tags"><i class="fas fa-tags fa-fw mr-2"></i>Tags </a>
+                            </li>
 
-                </ul>
+                        </ul>
 
-                <hr>
+                        <hr>
 
-                        <div>
-                            <h5>Tags</h5>
+                            <div>
+                                <h5>Tags</h5>
                                 <a href="/tags/net" class="badge badge-primary"> .NET (4)</a>
                                 <a href="/tags/tutorial" class="badge badge-primary"> Tutorial (3)</a>
                                 <a href="/tags/blog" class="badge badge-primary"> blog (3)</a>
@@ -119,43 +115,30 @@
                                 <a href="/tags/vlog" class="badge badge-primary"> vlog (1)</a>
                                 <a href="/tags/nanoframework" class="badge badge-primary"> nanoFramework (1)</a>
                                 <a href="/tags/cms" class="badge badge-primary"> CMS (1)</a>
-                            <div class="my-2 my-md-3">
-                                <a class="btn btn-primary" href="/tags" role="button">All Tags <i class="fas fa-angle-double-right"></i></a>
+                                <div class="my-2 my-md-3">
+                                    <a class="btn btn-primary" href="/tags" role="button">All Tags <i class="fas fa-angle-double-right"></i></a>
+                                </div>
                             </div>
-                        </div>
-
-            </div>
-    </nav>
-</header>
-
-
-
-
-    <div class="main-wrapper">
-        <div class="content-wrapper d-flex flex-column min-vh-100">
-
+                    </div>
+            </nav>
+        </header>
+        <div class="main-wrapper">
+            <div class="content-wrapper d-flex flex-column min-vh-100">
                 <article class="blog-post px-3 py-5 p-md-5">
                     <div class="container">
                         
 
 
-
-
 <header class="blog-post-header">
     <h2 class="title mb-2">Create your own .net powered static website for FREE</h2>
     <h3 class="meta mb-2">The ideal blog website for .net developers - Part I</h3>
-    <div class="meta mb-3"><span class="date">Saturday, 01 May 2021</span><span class="time">8 min read</span></div>
+    <div class="meta mb-3"><span class="date">Saturday, 1 May 2021</span><span class="time">8 min read</span></div>
 </header>
 <div class="blog-post-body">
         <figure class="blog-banner">
             <img class="img-fluid" src="/images/computer-code_awxc4nofzn.jpg" alt="image">
         </figure>
-    </div>
-
-
-
-
-   
+    </div>   
                         <p>Blog like Scott Hanselman. What self-respecting .net developer has not thought about writing their own blogs? I certainly have. As an Internet of Things Specialist and .net developer, I have embarked on many IT adventures over the years. Adventures of lessons learned, amusement, frustrations and wins that I’d love to share with the world. Being a non-native English-speaking dyslexic has held me from doing this, but no longer! With this blog about creating a 100% .NET powered static website for free, I’m officially launching my own blog and video website. Feiko.IO says: “HELLO WORLD!!!”</p>
 <p>When I decided to start a blog website, I soon found out that hosting a cool Umbraco powered WEB app on Azure is quite expensive for a small site. The cheapest usable Web App tier would set me back 46 euro a month. This is way too much for this stubborn, lazy, cheap ass developer. So I decided that ASP.NET is a no go.</p>
 <p>I found the website world has radically changed since I built my last website in 2014. It’s a brave new world out there. Finally, I found a solution to my website problem: Static Websites! Static websites are fast and cheap. But being a stubborn developer, I want to build this website using .net technology, using ASP.NET goodies like Visual Studio tooling, Razor script and CSHTML. And on top of everything I want a dynamic Content Management System. Follow me on my adventure in creating the ideal .net static Website, like the one you are on right now! Because: Yes, you can have it all!</p>
@@ -226,10 +209,6 @@ You can browse again to your website localhost:5080 and should see:</p>
 <p>Also try out some of the cool supported markdown <a href="https://statiq.dev/web/content-and-data/content/shortcodes">ShortCodes</a> inside your blog.</p>
 <p>Okay, that’s it for this tutorial. We are already having fun with .net and static websites. A great thanks to <a href="https://daveaglick.com/">Dave Glick</a> for the splendid work on Statiq platform. None of this would be possible without his work. In my next post, part II, we are going to add the long awaited CMS and start hosting your site for free on Github Pages. I can’t wait!</p>
 
-
-
-
-
                     </div><!--//container-->
                 </article>
                 <div class="container">
@@ -249,7 +228,6 @@ You can browse again to your website localhost:5080 and should see:</p>
                 </div>
                 <div class="containter">
                     <div class="px-3 py-5 p-md-5">
-
                         <script src="https://utteranc.es/client.js"
                                 repo="feiko/feiko.github.io"
                                 issue-term="title"
@@ -257,58 +235,44 @@ You can browse again to your website localhost:5080 and should see:</p>
                                 crossorigin="anonymous"
                                 async>
                         </script>
-
                     </div>
                 </div>
                 <br />
                 <br />
 
-            <!-- subfooter section -->
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <p class="copyright text-muted m-0">Copyright &#xA9; 2022</p>
-                        <br />
-                        <ul class="list-inline text-center small">
+                <!-- subfooter section -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <p class="copyright text-muted m-0">Copyright &#xA9; 2022</p>
+                            <br />
+                            <ul class="list-inline text-center small">
                                 <li class="list-inline-item">
                                     <a href="/feed.rss"><i class="fa fa-rss"></i> RSS Feed</a>
                                 </li>
                                 <li class="list-inline-item">
                                     <a href="/feed.atom"><i class="fa fa-rss"></i> Atom Feed</a>
                                 </li>
-                        </ul>
-                        <br />
-
+                            </ul>
+                            <br />
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <!-- Footer -->
-        
-
-
-<footer>
-    
-    <div class="footer text-center py-2 theme-bg-dark">
-
-        <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
-        <small class="copyright">Designed with <i class="fas fa-heart" style="color: #fb866a;"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
-
-    </div>
-</footer>
-
-    </div><!--//main-wrapper-->
-    <!-- Javascript -->
-    <script src=/plugins/jquery-3.4.1.min.js></script>
-    <script src=/plugins/popper.min.js></script>
-    <script src=/plugins/bootstrap/js/bootstrap.min.js></script>
-
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js"></script>
-
-    <script src=/js/blog.js></script>
-
-
-
-</body>
+            <!-- Footer -->
+            
+            <footer>  
+                <div class="footer text-center py-2 theme-bg-dark">
+                    <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+                    <small class="copyright">Designed with <i class="fas fa-heart" style="color: #fb866a;"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+                </div>
+            </footer>
+        </div><!--//main-wrapper-->
+        <!-- Javascript -->
+        <script src=/plugins/jquery-3.4.1.min.js></script>
+        <script src=/plugins/popper.min.js></script>
+        <script src=/plugins/bootstrap/js/bootstrap.min.js></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js"></script>
+        <script src=/js/blog.js></script>
+    </body>
 </html> 

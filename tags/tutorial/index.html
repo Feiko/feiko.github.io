@@ -5,102 +5,98 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:og="http://ogp.me/ns#" lang="en">
-<head>
-    <title>Feiko.IO - Tutorial</title>
+    <head>
+        <title>Feiko.IO - Tutorial</title>
 
-    <!-- Meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Feiko Gorter">
-    <meta property="og:site_name" content="Feiko.IO">
-    <meta name="application-name" content="Feiko.IO" />
-    <meta name="msapplication-tooltip" content="Feiko.IO" />
-    <meta name="msapplication-starturl" content="http://www.feiko.io/" />
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Feiko Gorter">
+        <meta property="og:site_name" content="Feiko.IO">
+        <meta name="application-name" content="Feiko.IO" />
+        <meta name="msapplication-tooltip" content="Feiko.IO" />
+        <meta name="msapplication-starturl" content="http://www.feiko.io/" />
 
-    <meta name="twitter:site" content="@feikogorter">
-    <meta name="twitter:creator" content="@feikogorter">
-    <meta name="twitter:title" content="Feiko.IO - Tutorial">
-    <meta property="og:title" content="Feiko.IO - Tutorial" />
+        <meta name="twitter:site" content="@feikogorter">
+        <meta name="twitter:creator" content="@feikogorter">
+        <meta name="twitter:title" content="Feiko.IO - Tutorial">
+        <meta property="og:title" content="Feiko.IO - Tutorial" />
 
-            <meta property='og:description' content="Hi, I&#x27;m Feiko Gorter, an IoT specialist, inventor, speaker, dyslexic and .net geek. Welcome to my personal site about everything IoT and Tech." />
-            <meta name="description" content="Hi, I&#x27;m Feiko Gorter, an IoT specialist, inventor, speaker, dyslexic and .net geek. Welcome to my personal site about everything IoT and Tech.">
-            <meta name="twitter:description" content="Hi, I&#x27;m Feiko Gorter, an IoT specialist, inventor, speaker, dyslexic and .net geek. Welcome to my personal site about everything IoT and Tech.">
-            <meta name="twitter:card" content="summary_large_image">
-            <meta property="og:type" content="website" />
-            <meta property="og:url" content="http://www.feiko.io/tags/tutorial" />
-                <meta property="og:image" content="http://www.feiko.io/images/feikoio.png" />
-                <meta name="twitter:image" content="http://www.feiko.io/images/feikoio.png" />
+        <meta property='og:description' content="Hi, I&#x27;m Feiko Gorter, an IoT specialist, inventor, speaker, dyslexic and .net geek. Welcome to my personal site about everything IoT and Tech." />
+        <meta name="description" content="Hi, I&#x27;m Feiko Gorter, an IoT specialist, inventor, speaker, dyslexic and .net geek. Welcome to my personal site about everything IoT and Tech.">
+        <meta name="twitter:description" content="Hi, I&#x27;m Feiko Gorter, an IoT specialist, inventor, speaker, dyslexic and .net geek. Welcome to my personal site about everything IoT and Tech.">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://www.feiko.io/tags/tutorial" />
+        <meta property="og:image" content="http://www.feiko.io/images/feikoio.png" />
+        <meta name="twitter:image" content="http://www.feiko.io/images/feikoio.png" />
 
-    <link rel="shortcut icon" href="/favicon.ico">
+        <link rel="shortcut icon" href="/favicon.ico">
 
-    <!-- FontAwesome JS-->
-    <script defer src=/fontawesome/js/all.min.js></script>
+        <!-- FontAwesome JS-->
+        <script defer src=/fontawesome/js/all.min.js></script>
 
-    <!-- Theme CSS -->
-    <link id="theme-style" rel="stylesheet" href=/css/theme-5.css>
-    <link id="theme-style" rel="stylesheet" href=/css/site.css>
+        <!-- Theme CSS -->
+        <link id="theme-style" rel="stylesheet" href=/css/theme-5.css>
+        <link id="theme-style" rel="stylesheet" href=/css/site.css>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/monokai-sublime.min.css">
 
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/monokai-sublime.min.css">
+    </head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LY52GT5EFK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-</head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LY52GT5EFK"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+    <body>
 
-    gtag('config', 'GA_MEASUREMENT_ID');
-</script>
-<body>
+        <!-- Page Header -->
+        
 
-    <!-- Page Header -->
-    
+        <header class="header text-center">
+            <h1 class="blog-name d-inline-flex pt-lg-4"><a href="/">Feiko.IO</a></h1>
 
-
-
-<header class="header text-center">
-    <h1 class="blog-name d-inline-flex pt-lg-4"><a href="/">Feiko.IO</a></h1>
-
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
 
-        <div id="navigation" class="collapse navbar-collapse flex-column">
-            <div class="profile-section pt-3 pt-lg-0">
-                <img class="profile-image mb-3 rounded-circle mx-auto" src="/images/feiko-gorter.png" alt="image">
+                <div id="navigation" class="collapse navbar-collapse flex-column">
+                    <div class="profile-section pt-3 pt-lg-0">
+                        <img class="profile-image mb-3 rounded-circle mx-auto" src="/images/feiko-gorter.png" alt="image">
+                        <div class="bio mb-3">
+                            <p>Hi, I'm Feiko Gorter, an IoT specialist, inventor, speaker, dyslexic and .net geek. Welcome to my personal site about everything IoT and Tech.</p>
 
-                <div class="bio mb-3">
-                    <p>Hi, I'm Feiko Gorter, an IoT specialist, inventor, speaker, dyslexic and .net geek. Welcome to my personal site about everything IoT and Tech.</p>
-
-                </div><!--//bio-->
+                        </div><!--//bio-->
                         <ul class="social-list list-inline py-3 mx-auto">
-                                <li class="list-inline-item"><a href="https://www.linkedin.com/in/feikogorter"><i class="fab fa-linkedin fa-fw"></i></a></li>
-                                <li class="list-inline-item"><a href="https://github.com/feiko"><i class="fab fa-github fa-fw"></i></a></li>
-                                <li class="list-inline-item"><a href="https://www.youtube.com/channel/UCBX8mmVnL-juQWjOPwZSrTQ"><i class="fab fa-youtube fa-fw"></i></a></li>
-                                <li class="list-inline-item"><a href="https://twitter.com/feikogorter"><i class="fab fa-twitter fa-fw"></i></a></li>
+                            <li class="list-inline-item"><a href="https://www.linkedin.com/in/feikogorter"><i class="fab fa-linkedin fa-fw"></i></a></li>
+                            <li class="list-inline-item"><a href="https://github.com/feiko"><i class="fab fa-github fa-fw"></i></a></li>
+                            <li class="list-inline-item"><a href="https://www.youtube.com/channel/UCBX8mmVnL-juQWjOPwZSrTQ"><i class="fab fa-youtube fa-fw"></i></a></li>
+                            <li class="list-inline-item"><a href="https://twitter.com/feikogorter"><i class="fab fa-twitter fa-fw"></i></a></li>
                         </ul><!--//social-list-->
 
 
-                <ul class="navbar-nav flex-column text-left">
-                    <li class="nav-item ">
-                        <a class="nav-link" href="/"><i class="fas fa-home fa-fw mr-2"></i>Home <span class="sr-only">(current)</span></a>
-                    </li>
+                        <ul class="navbar-nav flex-column text-left">
+                            <li class="nav-item ">
+                                <a class="nav-link" href="/"><i class="fas fa-home fa-fw mr-2"></i>Home <span class="sr-only">(current)</span></a>
+                            </li>
                             <li class="nav-item  ">
                                 <a class="nav-link" href="/about-me"><i class="fas fa-user fa-fw mr-2"></i>About Me</a>
                             </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/tags"><i class="fas fa-tags fa-fw mr-2"></i>Tags </a>
-                    </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/tags"><i class="fas fa-tags fa-fw mr-2"></i>Tags </a>
+                            </li>
 
-                </ul>
+                        </ul>
 
-                <hr>
+                        <hr>
 
-                        <div>
-                            <h5>Tags</h5>
+                            <div>
+                                <h5>Tags</h5>
                                 <a href="/tags/net" class="badge badge-primary"> .NET (4)</a>
                                 <a href="/tags/tutorial" class="badge badge-primary"> Tutorial (3)</a>
                                 <a href="/tags/blog" class="badge badge-primary"> blog (3)</a>
@@ -110,153 +106,120 @@
                                 <a href="/tags/vlog" class="badge badge-primary"> vlog (1)</a>
                                 <a href="/tags/nanoframework" class="badge badge-primary"> nanoFramework (1)</a>
                                 <a href="/tags/cms" class="badge badge-primary"> CMS (1)</a>
-                            <div class="my-2 my-md-3">
-                                <a class="btn btn-primary" href="/tags" role="button">All Tags <i class="fas fa-angle-double-right"></i></a>
+                                <div class="my-2 my-md-3">
+                                    <a class="btn btn-primary" href="/tags" role="button">All Tags <i class="fas fa-angle-double-right"></i></a>
+                                </div>
                             </div>
-                        </div>
-
-            </div>
-    </nav>
-</header>
-
-
-
-
-    <div class="main-wrapper">
-        <div class="content-wrapper d-flex flex-column min-vh-100">
-
-                    <section class="cta-section theme-bg-light py-5">
-                        <div class="container text-center">
-                                <a href="/tags/net" class="badge badge-light"> .NET (4)</a>
-                                <a href="/tags/tutorial" class="badge badge-dark"> Tutorial (3)</a>
-                                <a href="/tags/blog" class="badge badge-light"> blog (3)</a>
-                                <a href="/tags/iot" class="badge badge-light"> IoT (2)</a>
-                                <a href="/tags/web" class="badge badge-light"> Web (2)</a>
-                                <a href="/tags/static" class="badge badge-light"> Static (2)</a>
-                                <a href="/tags/vlog" class="badge badge-light"> vlog (1)</a>
-                                <a href="/tags/nanoframework" class="badge badge-light"> nanoFramework (1)</a>
-                                <a href="/tags/cms" class="badge badge-light"> CMS (1)</a>
-                        </div><!--//container-->
-                    </section>
+                    </div>
+            </nav>
+        </header>
+        <div class="main-wrapper">
+            <div class="content-wrapper d-flex flex-column min-vh-100">
+                <section class="cta-section theme-bg-light py-5">
+                    <div class="container text-center">
+                        <a href="/tags/net" class="badge badge-light"> .NET (4)</a>
+                        <a href="/tags/tutorial" class="badge badge-dark"> Tutorial (3)</a>
+                        <a href="/tags/blog" class="badge badge-light"> blog (3)</a>
+                        <a href="/tags/iot" class="badge badge-light"> IoT (2)</a>
+                        <a href="/tags/web" class="badge badge-light"> Web (2)</a>
+                        <a href="/tags/static" class="badge badge-light"> Static (2)</a>
+                        <a href="/tags/vlog" class="badge badge-light"> vlog (1)</a>
+                        <a href="/tags/nanoframework" class="badge badge-light"> nanoFramework (1)</a>
+                        <a href="/tags/cms" class="badge badge-light"> CMS (1)</a>
+                    </div><!--//container-->
+                </section>
                 <section class="blog-list px-3 py-5 p-md-5">
                     <div class="container">
-
                         
 
 
 
 
+                        <div class="item mb-5">
+                            <div class="media">
+                                <div class="video-box video-box-square mr-3 d-md-flex post-thumb d-none">
+                                    <img class="img-fluid post-thumb d-none d-md-flex align-self-center" src="https://img.youtube.com/vi/nqst_EJEuQI/sddefault.jpg" alt="image">
+                                        <div class="play-icon">
+                                        <a href="/posts/2022-01-03-getting-started-with-net-nanoframework"><img src=/images/YouTube_play_button_icon.svg /> </a>
+                                    </div>
+                                </div>
+                                <div class="media-body">
+                                    <h3 class="title mb-1"><a href="/posts/2022-01-03-getting-started-with-net-nanoframework">Getting started with .NET nanoFramework</a></h3>
+                                    <h4 class="meta"><span class="subtitle">Create a Blinky app with C# on an ESP32</span></h4>
+                                    <div class="meta mb-1"><span class="date">Monday, 3 January 2022</span><span class="time">19 min watch</span></div>
+                                    <div class="video-box video-box-wide mr-3  post-thumb 	d-block d-md-none ">
+                                        <img class="img-fluid post-thumb d-block d-md-none align-self-center" src="https://img.youtube.com/vi/nqst_EJEuQI/sddefault.jpg" alt="image">
+                                        <div class="play-icon">
+                                            <a href="/posts/2022-01-03-getting-started-with-net-nanoframework"><img src=/images/YouTube_play_button_icon.svg /> </a>
+                                        </div>
+                                    </div>
+                                    <div class="intro">In this video I'll show you how to get started with .NET nanoFramework, C# for microcontrollers. Just get yourself a cheap ESP32 microcontroller and follow along!</div>
+                                    <a class="more-link" href="/posts/2022-01-03-getting-started-with-net-nanoframework">Watch &rarr;</a>
+                                </div><!--//media-body-->
+                            </div><!--//media-->
+                        </div>
 
+                        <div class="item mb-5">
+                            <div class="media">
+                                <img class="mr-3 img-fluid post-thumb d-none d-md-flex" src="/images/css-thumbnail.jpg" alt="image">
+                                <div class="media-body">
+                                    <h3 class="title mb-1"><a href="/posts/2021-05-07-adding-netlify-cms-to-your-net-powered-static-website">Adding Netlify CMS to your .NET powered static Website</a></h3>
+                                    <h4 class="meta"><span class="subtitle">The ideal blog website for .NET developers - Part II</span></h4>
+                                    <div class="meta mb-1"><span class="date">Friday, 7 May 2021</span><span class="time">8 min read</span></div>
+                                    <div class="intro">This is Part II of my blog about creating your own personal, static blog website. In this blog I will show you how to add Netlify CMS to your website and host this awesome site on GitHub Pages. At the end of this blog you’ll be truly ready to start blogging like a pro.  </div>
+                                    <a class="more-link" href="/posts/2021-05-07-adding-netlify-cms-to-your-net-powered-static-website">Read more &rarr;</a>
+                                </div><!--//media-body-->
+                            </div><!--//media-->
+                        </div>
 
-
-
-
-
-<div class="item mb-5">
-    <div class="media">
-        <div class="video-box mr-3 d-md-flex post-thumb d-none">
-            <img class="img-fluid post-thumb d-none d-md-flex align-self-center" src="https://img.youtube.com/vi/nqst_EJEuQI/sddefault.jpg" alt="image">
-                <div class="play-icon">
-                    <a href="/posts/2022-01-03-getting-started-with-net-nanoframework"><img src=/images/YouTube_play_button_icon.svg /> </a>
-                </div>
-            </div>
-            <div class="media-body">
-                <h3 class="title mb-1"><a href="/posts/2022-01-03-getting-started-with-net-nanoframework">Getting started with .NET nanoFramework</a></h3>
-                <h4 class="meta"><span class="subtitle">Create a Blinky app with C# on an ESP32</span></h4>
-                <div class="meta mb-1"><span class="date">Monday, 03 January 2022</span><span class="time">19 min watch</span></div>
-                <div class="intro">In this video I'll show you how to get started with .NET nanoFramework, C# for microcontrollers. Just get yourself a cheap ESP32 microcontroller and follow along!</div>
-                <a class="more-link" href="/posts/2022-01-03-getting-started-with-net-nanoframework">Watch &rarr;</a>
-            </div><!--//media-body-->
-        </div><!--//media-->
-</div>
-
-
-
-
-
-<div class="item mb-5">
-    <div class="media">
-            <img class="mr-3 img-fluid post-thumb d-none d-md-flex" src="/images/css-thumbnail.jpg" alt="image">
-            <div class="media-body">
-                <h3 class="title mb-1"><a href="/posts/2021-05-07-adding-netlify-cms-to-your-net-powered-static-website">Adding Netlify CMS to your .NET powered static Website</a></h3>
-                <h4 class="meta"><span class="subtitle">The ideal blog website for .NET developers - Part II</span></h4>
-                <div class="meta mb-1"><span class="date">Friday, 07 May 2021</span><span class="time">8 min read</span></div>
-                <div class="intro">This is Part II of my blog about creating your own personal, static blog website. In this blog I will show you how to add Netlify CMS to your website and host this awesome site on GitHub Pages. At the end of this blog you’ll be truly ready to start blogging like a pro.  </div>
-                <a class="more-link" href="/posts/2021-05-07-adding-netlify-cms-to-your-net-powered-static-website">Read more &rarr;</a>
-            </div><!--//media-body-->
-        </div><!--//media-->
-</div>
-
-
-
-
-
-<div class="item mb-5">
-    <div class="media">
-            <img class="mr-3 img-fluid post-thumb d-none d-md-flex" src="/images/statiq-images.png" alt="image">
-            <div class="media-body">
-                <h3 class="title mb-1"><a href="/posts/2021-04-30-create-your-own-net-powered-website-for-free">Create your own .net powered static website for FREE</a></h3>
-                <h4 class="meta"><span class="subtitle">The ideal blog website for .net developers - Part I</span></h4>
-                <div class="meta mb-1"><span class="date">Saturday, 01 May 2021</span><span class="time">8 min read</span></div>
-                <div class="intro">Blog like Scott Hanselman, or just have a personal landing page with a simple CMS. I'll show you the secret to creating an awesome .net static website. Just like the one you're on right now. In this tutorial you will learn to build a static .net website with all the magic of Razor and CSHTML you know and love. Just try it!</div>
-                <a class="more-link" href="/posts/2021-04-30-create-your-own-net-powered-website-for-free">Read more &rarr;</a>
-            </div><!--//media-body-->
-        </div><!--//media-->
-</div>
-
-
-
-
-
+                        <div class="item mb-5">
+                            <div class="media">
+                                <img class="mr-3 img-fluid post-thumb d-none d-md-flex" src="/images/statiq-images.png" alt="image">
+                                <div class="media-body">
+                                    <h3 class="title mb-1"><a href="/posts/2021-04-30-create-your-own-net-powered-website-for-free">Create your own .net powered static website for FREE</a></h3>
+                                    <h4 class="meta"><span class="subtitle">The ideal blog website for .net developers - Part I</span></h4>
+                                    <div class="meta mb-1"><span class="date">Saturday, 1 May 2021</span><span class="time">8 min read</span></div>
+                                    <div class="intro">Blog like Scott Hanselman, or just have a personal landing page with a simple CMS. I'll show you the secret to creating an awesome .net static website. Just like the one you're on right now. In this tutorial you will learn to build a static .net website with all the magic of Razor and CSHTML you know and love. Just try it!</div>
+                                    <a class="more-link" href="/posts/2021-04-30-create-your-own-net-powered-website-for-free">Read more &rarr;</a>
+                                </div><!--//media-body-->
+                            </div><!--//media-->
+                        </div>
                     </div>
                 </section>
 
-            <!-- subfooter section -->
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <p class="copyright text-muted m-0">Copyright &#xA9; 2022</p>
-                        <br />
-                        <ul class="list-inline text-center small">
+                <!-- subfooter section -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <p class="copyright text-muted m-0">Copyright &#xA9; 2022</p>
+                            <br />
+                            <ul class="list-inline text-center small">
                                 <li class="list-inline-item">
                                     <a href="/feed.rss"><i class="fa fa-rss"></i> RSS Feed</a>
                                 </li>
                                 <li class="list-inline-item">
                                     <a href="/feed.atom"><i class="fa fa-rss"></i> Atom Feed</a>
                                 </li>
-                        </ul>
-                        <br />
-
+                            </ul>
+                            <br />
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <!-- Footer -->
-        
-
-
-<footer>
-    
-    <div class="footer text-center py-2 theme-bg-dark">
-
-        <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
-        <small class="copyright">Designed with <i class="fas fa-heart" style="color: #fb866a;"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
-
-    </div>
-</footer>
-
-    </div><!--//main-wrapper-->
-    <!-- Javascript -->
-    <script src=/plugins/jquery-3.4.1.min.js></script>
-    <script src=/plugins/popper.min.js></script>
-    <script src=/plugins/bootstrap/js/bootstrap.min.js></script>
-
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js"></script>
-
-    <script src=/js/blog.js></script>
-
-
-
-</body>
+            <!-- Footer -->
+            
+            <footer>  
+                <div class="footer text-center py-2 theme-bg-dark">
+                    <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+                    <small class="copyright">Designed with <i class="fas fa-heart" style="color: #fb866a;"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+                </div>
+            </footer>
+        </div><!--//main-wrapper-->
+        <!-- Javascript -->
+        <script src=/plugins/jquery-3.4.1.min.js></script>
+        <script src=/plugins/popper.min.js></script>
+        <script src=/plugins/bootstrap/js/bootstrap.min.js></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js"></script>
+        <script src=/js/blog.js></script>
+    </body>
 </html> 
