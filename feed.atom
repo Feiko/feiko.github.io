@@ -7,8 +7,102 @@
 	</author>
 	<link rel="self" href="https://www.feiko.io/" />
 	<rights>Copyright © 2022</rights>
-	<updated>2022-02-18T12:28:48Z</updated>
+	<updated>2022-02-18T14:06:55Z</updated>
 	<subtitle>Feiko's personal site about everything IoT and Tech</subtitle>
+	<entry>
+		<id>http://www.feiko.io/posts/2022-02-18-websocket-server-for-net-nanoframework</id>
+		<title>WebSocket Server for .NET nanoFramework</title>
+		<link href="http://www.feiko.io/posts/2022-02-18-websocket-server-for-net-nanoframework" />
+		<link rel="enclosure" type="image" href="http://www.feiko.io/images/screenshot-2022-02-18-12-22-47.png" />
+		<updated>2022-02-18T11:31:43Z</updated>
+		<content>&lt;p&gt;It’s been a little quite on my website lately. For good reasons. Last month’s I’ve been hard at work getting the nanoFramework library ready for release. In This blog I want to show how easy it is to get started with websockets on .NET nanoFramwork. The blog goes together with a video I made about websockets for the Microsoft Internet of Things show.&lt;/p&gt;
+&lt;h3 id="what-are-websockets-and-why-should-you-care-about-running-websockets-on-tiny-iot-devices"&gt;What are websockets and why should you care about running websockets on tiny IoT devices?&lt;/h3&gt;
+&lt;p&gt;Websockets is a web protocol that uses a normal HTTP request and strips away all the HTTP stuff so it has direct access to the underlying TCP Socket. This way the server client connections stays open and the server can continuously send information to the client and the other way around. This opposed to normal HTTP requests where a client asks for some information and gets a reply after which the connection is usually closed.
+Imagine you have a webpage or a WebApp that you constantly want to update with new information. Then you want to be using websockets. Websockets are used more often on the World Wide Web than you might think. Every time you open a page in your browser and a chat bot starts a live conversation. You know this webpage is using websockets.&lt;/p&gt;
+&lt;p&gt;Now why do you want to have websockets on tiny microcontrollers? Well imagine you have a small weather station on the roof of your house and you want to be able to monitor the wind in real-time? Having this weather station run a small websocket server is a great way of doing this. Having a real-time graph that updates every second or even less, is not a problem for websockets! Of course you can also use other techniques like MQTT or a direct TCP connection. But this requires your user to install some kind of app on there device. When using websockets you can use any device with a web browser to connect to your device without the need of installing any apps. It’s easy and it makes your IoT projects that much more fun!&lt;/p&gt;
+&lt;h3 id="how-to-get-started-with.net-nanoframework-and-websockets"&gt;How to get started with .net nanoFramework and websockets?&lt;/h3&gt;
+&lt;p&gt;As always the complete Websocket implementation is &lt;a href="https://github.com/nanoframework/System.Net.WebSockets"&gt;open source on Github&lt;/a&gt; together with all the documentation and links to some sample projects. I’ve gone through the trouble of creating a websocket client as well as a websocket server implementation. For this blog we’ll be looking into the first sample &lt;a href="https://github.com/nanoframework/Samples/tree/main/samples/WebSockets/WebSockets.Server.RgbSample"&gt;Server.RgbSample&lt;/a&gt; using the nanoFramework WebSocket Server.&lt;/p&gt;
+&lt;p&gt;In this example we are going to control the RGB led of an ATOM Lite ESP32 microcontroller device from M5Stack. The ATOM Lite is a great little and very cheap device with a RGB Led, a programable button and some extra IO’s. If you don’t own a ATOM Lite you can probably just use any ESP32, of course this is less fun 😉.&lt;/p&gt;
+&lt;h3 id="the-code"&gt;The Code&lt;/h3&gt;
+&lt;p&gt;You can get the code of the &lt;a href="https://github.com/nanoframework/Samples/tree/main/samples/WebSockets/WebSockets.Server.RgbSample"&gt;WebSockets.Server.RgbSample&lt;/a&gt; sample by cloning the complete &lt;a href="https://github.com/nanoframework/Samples.git"&gt;Samples Git repo&lt;/a&gt; or download a zip copy from Github. Go to the &lt;code&gt;.\Samples\samples\Websockets\WebSockets.Server.RgbSample&lt;/code&gt; directory and open the &lt;code&gt;NFWebSockets.Server.RgbExample.sln&lt;/code&gt; file with Visual Studio. If you want to run the code make sure you update all the nuget packages to the latest preview versions. If you want to create your own websocket solution you can simply install the nanoFramework.WebSocket.Server library as a NuGet package.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;If you're new to nanoFramework, or run into trouble you can watch this &lt;a href="https://www.feiko.io/posts/2022-01-03-getting-started-with-net-nanoframework"&gt;video&lt;/a&gt; I created on how to get started. You'll be up and running in now time!&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Yes you made it. Now it's time to get started with websockets, it's easy. Creating and starting the websocket server is done with the following code.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-csharp"&gt;_wsServer = new WebSocketServer(new WebSocketServerOptions()
+    {
+        MaxClients = 10,
+        IsStandAlone = false
+    });
+
+
+_wsServer.MessageReceived += WsServer_MessageReceived;
+_wsServer.Start();
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;As you can see you can use the optional &lt;code&gt;WebSocketServerOptions&lt;/code&gt; to set some extra options. It’s good practice to set a max number of websocket clients. This will make sure you don’t run out of resources. Remember it’s still only a small microcontroller with a few hundred KB of ram.&lt;/p&gt;
+&lt;p&gt;By default the websocket server will run as a standalone server hosted on port 80. Because we are also going to host our own WebApp we want to integrate it with a webserver. To be able to do this I’ve set the &lt;code&gt;IsStandAlone&lt;/code&gt; option to &lt;code&gt;false&lt;/code&gt;.
+Before we start the server we attach an event handler to the &lt;code&gt;MessageReceived&lt;/code&gt; event. This event handler is called whenever there is an incoming websocket message from a client, it's where all the magic happens.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-csharp"&gt;private static void WsServer_MessageReceived(object sender, MessageReceivedEventArgs e)
+{
+    var wsServer = (WebSocketServer)sender;
+    if (e.Frame.MessageType == WebSocketMessageType.Binary &amp;amp;&amp;amp; e.Frame.MessageLength == 3)
+    {
+        AtomLite.NeoPixel.SetColor(Color.FromArgb(e.Frame.Buffer[0], e.Frame.Buffer[1], e.Frame.Buffer[2]));
+        wsServer.BroadCast(e.Frame.Buffer);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Here we see that the server is expecting the RGB color to be send as an array of three bytes. For every color one byte: Red Green and Blue. This color is send to the LED of the device and then send to all connected clients.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;*Note:&lt;/strong&gt; If you like you can of course also specify the client you want to send the information to. To monitor the connected clients you can use &lt;code&gt;WebSocketOpened&lt;/code&gt; and &lt;code&gt;WebSocketClosed&lt;/code&gt; event which will provide the &lt;code&gt;EndPoint&lt;/code&gt; of the client that is used as an identifier for the websockets. &lt;code&gt;Listclients&lt;/code&gt; will provide you with a list of endpoints of all connected clients.*&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Finally the code below shows how to handover a websocket request from the Webserver to the Websocket Server.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-csharp"&gt;//webserver receive message
+private static void WebServer_CommandReceived(object obj, WebServerEventArgs e)
+{
+    //check the path of the request
+    if (e.Context.Request.RawUrl == &amp;quot;/&amp;quot;)
+    {
+        //check if this is a websocket request or a page request 
+        if (e.Context.Request.Headers\[&amp;quot;Upgrade&amp;quot;] == &amp;quot;websocket&amp;quot;)
+        {
+            //Upgrade to a websocket
+            _wsServer.AddWebSocket(e.Context);
+        }
+        else
+        {
+            //Return the WebApp
+            e.Context.Response.ContentType = &amp;quot;text/html&amp;quot;;
+            e.Context.Response.ContentLength64 = html.Length;
+            WebServer.OutPutStream(e.Context.Response, html);
+        }
+    }
+    else
+    {
+        //Send Page not Found
+        e.Context.Response.StatusCode = 404;
+        WebServer.OutPutStream(e.Context.Response, &amp;quot;Page not Found!&amp;quot;);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Here we check if a web request is a Websocket request by checking the Upgrade header. If so we just handover the webrequest context to the webserver using &lt;code&gt;_wsServer.AddWebSocket(e.Context)&lt;/code&gt;. And the webserver will work its magic.
+If the request is a normal web request we’ll return the WebApp. And that’s everything.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;*Note:&lt;/strong&gt; If you want to keep track of specific websocket users, you can use a custom headers that you read using the webserver before you handover the request context. The request also contains the unique IPEndpoint that’s used by the webserver. This is one way to keep track of your clients.*&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id="run-the-solution"&gt;Run the solution&lt;/h3&gt;
+&lt;p&gt;After you changed the wifi &lt;code&gt;Ssid&lt;/code&gt; and &lt;code&gt;Password&lt;/code&gt; in the code you’re ready fire everything up and see what happens. In the debug output you’ll find the url that you can use to connect to your device. Make sure you’re on the same network as the device.&lt;/p&gt;
+&lt;p&gt;Open up a browser and connect to your device using the url or IP address of your device.
+In the app you can pick a color it’s very responsive. You can even drag over the color picker and the colors will change instantly. Now the background is the color that’s broadcasted to all connected clients. So let’s make it interesting and open up some extra browser tabs. Now if you run these tabs side by side you can see background color on all browser windows are changing in real-time. This is something you can’t achieve with normal HTTP requests.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; If you run the device without the debugger attached you can get even higher websocket throughput speeds.*&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id="final-thoughts"&gt;Final thoughts&lt;/h3&gt;
+&lt;p&gt;Experiencing this demo you probably can imagine how easy and fun it would be to create an app that would constantly output sensor data i.e. for a wind meter.
+I hope you learned how easy and awesome it is to create a websocket server. Please let me know what you’re going to build using websockets. Have fun!&lt;/p&gt;
+</content>
+		<summary>Run a Websocket Server and Webserver on a Microcontroller using .NET nanoFramework</summary>
+	</entry>
 	<entry>
 		<id>http://www.feiko.io/posts/2022-01-03-getting-started-with-net-nanoframework</id>
 		<title>Getting started with .NET nanoFramework</title>
