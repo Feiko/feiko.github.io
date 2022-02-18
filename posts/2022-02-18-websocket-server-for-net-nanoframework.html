@@ -1,0 +1,292 @@
+
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#" lang="en">
+    <head>
+        <title>Feiko.IO - WebSocket Server for .NET nanoFramework</title>
+
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Feiko Gorter">
+        <meta property="og:site_name" content="Feiko.IO">
+        <meta name="application-name" content="Feiko.IO" />
+        <meta name="msapplication-tooltip" content="Feiko.IO" />
+        <meta name="msapplication-starturl" content="http://www.feiko.io/" />
+
+        <meta name="twitter:site" content="@feikogorter">
+        <meta name="twitter:creator" content="@feikogorter">
+        <meta name="twitter:title" content="Feiko.IO - WebSocket Server for .NET nanoFramework">
+        <meta property="og:title" content="Feiko.IO - WebSocket Server for .NET nanoFramework" />
+
+        <meta property='og:description' content="Run a Websocket Server and Webserver on a Microcontroller using .NET nanoFramework" />
+        <meta name="description" content="Run a Websocket Server and Webserver on a Microcontroller using .NET nanoFramework">
+        <meta name="twitter:description" content="Run a Websocket Server and Webserver on a Microcontroller using .NET nanoFramework">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta property="og:url" content="http://www.feiko.io/posts/2022-02-18-websocket-server-for-net-nanoframework" />
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:image" content="http://www.feiko.io/images/screenshot-2022-02-18-12-22-47.png">
+        <meta property="og:image" content="http://www.feiko.io/images/screenshot-2022-02-18-12-22-47.png" />
+        <meta property="og:type" content="article" />
+        <meta name="publish_date" property="og:article:published_time" content="02/18/2022 11:31" />
+        <meta name="author" property="og:article:author" content="Feiko Gorter" />
+        <meta property="og:section" content="Technology" />
+        <meta property="og:article:tag" content="blog" />
+        <meta property="og:article:tag" content=".NET" />
+        <meta property="og:article:tag" content="nanoFramework" />
+        <meta property="og:article:tag" content="IoT" />
+        <meta property="og:article:tag" content="WebSockets" />
+
+        <link rel="shortcut icon" href="/favicon.ico">
+
+        <!-- FontAwesome JS-->
+        <script defer src=/fontawesome/js/all.min.js></script>
+
+        <!-- Theme CSS -->
+        <link id="theme-style" rel="stylesheet" href=/css/theme-5.css>
+        <link id="theme-style" rel="stylesheet" href=/css/site.css>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/monokai-sublime.min.css">
+
+    </head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LY52GT5EFK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+    <body>
+
+        <!-- Page Header -->
+        
+
+        <header class="header text-center">
+            <h1 class="blog-name d-inline-flex pt-lg-4"><a href="/">Feiko.IO</a></h1>
+
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+
+                <div id="navigation" class="collapse navbar-collapse flex-column">
+                    <div class="profile-section pt-3 pt-lg-0">
+                        <img class="profile-image mb-3 rounded-circle mx-auto" src="/images/feiko-gorter.png" alt="image">
+                        <div class="bio mb-3">
+                            <p>Hi, I'm Feiko Gorter, an IoT specialist, inventor, speaker, dyslexic and .net geek. Welcome to my personal site about everything IoT and Tech.</p>
+
+                        </div><!--//bio-->
+                        <ul class="social-list list-inline py-3 mx-auto">
+                            <li class="list-inline-item"><a href="https://www.linkedin.com/in/feikogorter"><i class="fab fa-linkedin fa-fw"></i></a></li>
+                            <li class="list-inline-item"><a href="https://github.com/feiko"><i class="fab fa-github fa-fw"></i></a></li>
+                            <li class="list-inline-item"><a href="https://www.youtube.com/channel/UCBX8mmVnL-juQWjOPwZSrTQ"><i class="fab fa-youtube fa-fw"></i></a></li>
+                            <li class="list-inline-item"><a href="https://twitter.com/feikogorter"><i class="fab fa-twitter fa-fw"></i></a></li>
+                        </ul><!--//social-list-->
+
+
+                        <ul class="navbar-nav flex-column text-left">
+                            <li class="nav-item ">
+                                <a class="nav-link" href="/"><i class="fas fa-home fa-fw mr-2"></i>Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item  ">
+                                <a class="nav-link" href="/about-me"><i class="fas fa-user fa-fw mr-2"></i>About Me</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="/tags"><i class="fas fa-tags fa-fw mr-2"></i>Tags </a>
+                            </li>
+
+                        </ul>
+
+                        <hr>
+
+                            <div>
+                                <h5>Tags</h5>
+                                <a href="/tags/net" class="badge badge-primary"> .NET (4)</a>
+                                <a href="/tags/tutorial" class="badge badge-primary"> Tutorial (3)</a>
+                                <a href="/tags/blog" class="badge badge-primary"> blog (3)</a>
+                                <a href="/tags/iot" class="badge badge-primary"> IoT (2)</a>
+                                <a href="/tags/web" class="badge badge-primary"> Web (2)</a>
+                                <a href="/tags/static" class="badge badge-primary"> Static (2)</a>
+                                <a href="/tags/vlog" class="badge badge-primary"> vlog (1)</a>
+                                <a href="/tags/nanoframework" class="badge badge-primary"> nanoFramework (1)</a>
+                                <a href="/tags/cms" class="badge badge-primary"> CMS (1)</a>
+                                <div class="my-2 my-md-3">
+                                    <a class="btn btn-primary" href="/tags" role="button">All Tags <i class="fas fa-angle-double-right"></i></a>
+                                </div>
+                            </div>
+                    </div>
+            </nav>
+        </header>
+        <div class="main-wrapper">
+            <div class="content-wrapper d-flex flex-column min-vh-100">
+                <article class="blog-post px-3 py-5 p-md-5">
+                    <div class="container">
+                        
+
+
+<header class="blog-post-header">
+    <h2 class="title mb-2">WebSocket Server for .NET nanoFramework</h2>
+    <h3 class="meta mb-2">Having fun with websockets</h3>
+    <div class="meta mb-3"><span class="date">Friday, 18 February 2022</span><span class="time">5 min read</span></div>
+</header>
+<div class="blog-post-body">
+        <figure class="blog-banner">
+            <img class="img-fluid" src="/images/screenshot-2022-02-18-12-22-47.png" alt="image">
+        </figure>
+    </div>   
+                        <p>It’s been a little quite on my website lately. For good reasons. Last month’s I’ve been hard at work getting the nanoFramework library ready for release. In this blog that goes together with a video I made for the Microsoft Azure IoT show, I want to show how easy it is to get started with websockets on .NET nanoFramwork.</p>
+<h3 id="what-are-websockets-and-why-should-you-care-about-running-websockets-on-tiny-iot-devices">What are websockets and why should you care about running websockets on tiny IoT devices?</h3>
+<p>Websockets is a web protocol that uses a normal HTTP request and strips away all the HTTP stuff so it has direct access to the underlying TCP Socket. This way the server client connections stays open and the server can continuously send information to the client and the other way around. This opposed to normal HTTP requests where a client asks for some information and gets a reply after which the connection is usually closed.
+Imagine you have a webpage or a WebApp that you constantly want to update with new information. Then you want to be using websockets. Websockets are used more often on the World Wide Web than you might think. Every time you open a page in your browser and a chat bot starts a live conversation. You know this webpage is using websockets.</p>
+<p>Now why do you want to have websockets on tiny microcontrollers? Well imagine you have a small weather station on the roof of your house and you want to be able to monitor the wind in real-time? Having this weather station run a small websocket server is a great way of doing this. Having a real-time graph that updates every second or even less, is not a problem for websockets! Of course you can also use other techniques like MQTT or a direct TCP connection. But this requires your user to install some kind of app on there device. When using websockets you can use any device with a web browser to connect to your device without the need of installing any apps. It’s easy and it makes your IoT projects that much more fun!</p>
+<h3 id="how-to-get-started-with.net-nanoframework-and-websockets">How to get started with .net nanoFramework and websockets?</h3>
+<p>As always the complete Websocket implementation is <a href="https://github.com/nanoframework/System.Net.WebSockets">open source on Github</a> together with all the documentation and links to some sample projects. I’ve gone through the trouble of creating a websocket client as well as a websocket server implementation. For this blog we’ll be looking into the first sample <a href="https://github.com/nanoframework/Samples/tree/main/samples/WebSockets/WebSockets.Server.RgbSample">Server.RgbSample</a> using the nanoFramework WebSocket Server.</p>
+<p>In this example we are going to control the RGB led of an ATOM Lite ESP32 microcontroller device from M5Stack. The ATOM Lite is a great little and very cheap device with a RGB Led and programable button and some extra IO’s you can use. If you don’t own a ATOM Lite you can probably just use any ESP32, of course this is less fun 😉.</p>
+<h3 id="the-code">The Code</h3>
+<p>You can simply clone the <a href="https://github.com/nanoframework/Samples/tree/main/samples/WebSockets/WebSockets.Server.RgbSample">WebSockets.Server.RgbSample</a> sample project using Git or download a zip copy from github. You can open the .sln file in Visual Studio. If you want to run the code make sure you update all the nuget packages to the latest preview versions. If you want to create your own websocket solution you can simply install the nanoFramework.WebSocket.Server library as a NuGet package.</p>
+<blockquote>
+<p><em>If you're new to nanoFramework you can watch this <a href="https://www.feiko.io/posts/2022-01-03-getting-started-with-net-nanoframework">video</a> I created on how to get started. You'll be up and running in now time!</em></p>
+</blockquote>
+<p>Now we’ve made it very simple to get started with websockets. Creating and starting the websocket server is done with the following code.</p>
+<pre><code class="language-csharp">_wsServer = new WebSocketServer(new WebSocketServerOptions()
+    {
+        MaxClients = 10,
+        IsStandAlone = false
+    });
+
+
+_wsServer.MessageReceived += WsServer_MessageReceived;
+_wsServer.Start();
+</code></pre>
+<p>As you can see you can use the optional <code>WebSocketServerOptions</code> to set some extra options. It’s good practice to set a max number of websocket clients, so you make sure you don’t run out of resources. Remember it’s still only a small microcontroller with a few hundred KB of ram.</p>
+<p>By default the websocket server will run as a standalone server hosted on port 80. Because we are also going to host our own WebApp we want to integrate it with a webserver. To be able to do this I’ve set the <code>IsStandAlone</code> option to <code>false</code>.
+Before we start the server we attach an event handler to the <code>MessageReceived</code> event. This is where all the magic is happening.</p>
+<pre><code class="language-csharp">private static void WsServer_MessageReceived(object sender, MessageReceivedEventArgs e)
+{
+    var wsServer = (WebSocketServer)sender;
+    if (e.Frame.MessageType == WebSocketMessageType.Binary &amp;&amp; e.Frame.MessageLength == 3)
+    {
+        AtomLite.NeoPixel.SetColor(Color.FromArgb(e.Frame.Buffer[0], e.Frame.Buffer[1], e.Frame.Buffer[2]));
+        wsServer.BroadCast(e.Frame.Buffer);
+    }
+}
+</code></pre>
+<p>Here we see that the server is expecting the RGB color to be send as an array of three bytes. For every color one byte: Red Green and Blue. This color is send to the LED of the device and then send to all connected clients.</p>
+<blockquote>
+<p><em><strong>Note:</strong> If you like you can of course also specify the client you want to send the information to. To monitor the connected clients you can use `WebSocketOpened` and `WebSocketClosed` event which will provide the `EndPoint` of the client that is used as a identifier. `Listclients` will provide you with a complete list of endpoints of connected clients.</em></p>
+</blockquote>
+<p>Finally the code below shows how it is to handover a websocket request from the Webserver to the Websocket Server.</p>
+<p>\    private static void WebServer_CommandReceived(object obj, WebServerEventArgs e)
+{
+//check the path of the request
+if (e.Context.Request.RawUrl == &quot;/&quot;)
+{
+//check if this is a websocket request or a page request
+if (e.Context.Request.Headers[&quot;Upgrade&quot;] == &quot;websocket&quot;)
+{
+//Upgrade to a websocket
+_wsServer.AddWebSocket(e.Context);
+}
+else
+{
+//Return the WebApp
+e.Context.Response.ContentType = &quot;text/html&quot;;
+e.Context.Response.ContentLength64 = html.Length;
+WebServer.OutPutStream(e.Context.Response, html);
+}
+}
+else
+{
+//Send Page not Found
+e.Context.Response.StatusCode = 404;
+WebServer.OutPutStream(e.Context.Response, &quot;Page not Found!&quot;);
+}
+}</p>
+<p>Here we check if a web request is a Websocket request by checking the Upgrade header. If so we just handover the webrequest context to the webserver `_wsServer.AddWebSocket(e.Context)`. And the webserver will work its magic.
+If the request is a normal web request we’ll return the WebApp. And that’s everything.</p>
+<blockquote>
+<p><em><strong>Note:</strong> If you want to track specific websocket users, you can use a custom headers that you read using the webserver. The request also contains the unique IPEndpoint that’s used by the webserver to keep track of the WebSocket clients.</em></p>
+</blockquote>
+<h3 id="run-the-solution">Run the solution</h3>
+<p>After you changed the wifi Ssid and Password in the code you’re ready fire everything up and see what happens. In the output you’ll find the url that you can use to connect to your device. Make sure you’re on the same network as the device or nothing will work.</p>
+<p>Open up a browser and connect to your device using the url or IP address of your device.
+In the app you can pick a color it’s very responsive. You can even drag over the color picker and the colors will change instantly. Now the background is actually the color that’s reported back to the server and that is broadcasted to all connected clients. So let’s make it interesting and open up some extra browser tabs. Now if you run these tabs side by side you can see all the colors are changing real-time. This is something you can’t achieve with normal HTTP requests.</p>
+<blockquote>
+<p><em><strong>Note:</strong> If you run the device without the debugger attached you can even get higher websocket througput speed.</em></p>
+</blockquote>
+<h3 id="final-thoughts">Final thoughts</h3>
+<p>Experiencing this demo you can imagine of course how easy it would be to create an app that would constantly output sensor data for example for a wind meter.
+That’s how easy it and awesome it is to create a websocket server. Please let me know what you’re going to build using websockets. Have fun!</p>
+
+                    </div><!--//container-->
+                </article>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 d-flex justify-content-center">
+                            <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+                                <a class="a2a_button_twitter"></a>
+                                <a class="a2a_button_linkedin"></a>
+                                <a class="a2a_button_facebook"></a>
+                                <a class="a2a_button_whatsapp"></a>
+                                <a class="a2a_button_email"></a>
+                                <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+                            </div>
+                            <script async src="https://static.addtoany.com/menu/page.js"></script>
+                        </div>
+                    </div>
+                </div>
+                <div class="containter">
+                    <div class="px-3 py-5 p-md-5">
+                        <script src="https://utteranc.es/client.js"
+                                repo="feiko/feiko.github.io"
+                                issue-term="title"
+                                theme="github-light"
+                                crossorigin="anonymous"
+                                async>
+                        </script>
+                    </div>
+                </div>
+                <br />
+                <br />
+
+                <!-- subfooter section -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <p class="copyright text-muted m-0">Copyright &#xA9; 2022</p>
+                            <br />
+                            <ul class="list-inline text-center small">
+                                <li class="list-inline-item">
+                                    <a href="/feed.rss"><i class="fa fa-rss"></i> RSS Feed</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="/feed.atom"><i class="fa fa-rss"></i> Atom Feed</a>
+                                </li>
+                            </ul>
+                            <br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer -->
+            
+            <footer>  
+                <div class="footer text-center py-2 theme-bg-dark">
+                    <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+                    <small class="copyright">Designed with <i class="fas fa-heart" style="color: #fb866a;"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+                </div>
+            </footer>
+        </div><!--//main-wrapper-->
+        <!-- Javascript -->
+        <script src=/plugins/jquery-3.4.1.min.js></script>
+        <script src=/plugins/popper.min.js></script>
+        <script src=/plugins/bootstrap/js/bootstrap.min.js></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js"></script>
+        <script src=/js/blog.js></script>
+    </body>
+</html> 
