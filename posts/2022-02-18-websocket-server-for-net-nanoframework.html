@@ -178,46 +178,50 @@ Before we start the server we attach an event handler to the <code>MessageReceiv
 </code></pre>
 <p>Here we see that the server is expecting the RGB color to be send as an array of three bytes. For every color one byte: Red Green and Blue. This color is send to the LED of the device and then send to all connected clients.</p>
 <blockquote>
-<p><em><strong>Note:</strong> If you like you can of course also specify the client you want to send the information to. To monitor the connected clients you can use `WebSocketOpened` and `WebSocketClosed` event which will provide the `EndPoint` of the client that is used as a identifier. `Listclients` will provide you with a complete list of endpoints of connected clients.</em></p>
+<p><strong>Note:</strong> If you like you can of course also specify the client you want to send the information to. To monitor the connected clients you can use <code>WebSocketOpened</code> and <code>WebSocketClosed</code> event which will provide the <code>EndPoint</code> of the client that is used as a identifier. <code>Listclients</code> will provide you with a complete list of endpoints of connected clients.*</p>
 </blockquote>
 <p>Finally the code below shows how it is to handover a websocket request from the Webserver to the Websocket Server.</p>
-<p>\    private static void WebServer_CommandReceived(object obj, WebServerEventArgs e)
+<pre><code class="language-csharp">
+//webserver receive message
+private static void WebServer_CommandReceived(object obj, WebServerEventArgs e)
 {
-//check the path of the request
-if (e.Context.Request.RawUrl == &quot;/&quot;)
-{
-//check if this is a websocket request or a page request
-if (e.Context.Request.Headers[&quot;Upgrade&quot;] == &quot;websocket&quot;)
-{
-//Upgrade to a websocket
-_wsServer.AddWebSocket(e.Context);
+    //check the path of the request
+    if (e.Context.Request.RawUrl == &quot;/&quot;)
+    {
+        //check if this is a websocket request or a page request 
+        if (e.Context.Request.Headers\[&quot;Upgrade&quot;] == &quot;websocket&quot;)
+        {
+            //Upgrade to a websocket
+            _wsServer.AddWebSocket(e.Context);
+        }
+        else
+        {
+            //Return the WebApp
+            e.Context.Response.ContentType = &quot;text/html&quot;;
+            e.Context.Response.ContentLength64 = html.Length;
+            WebServer.OutPutStream(e.Context.Response, html);
+        }
+    }
+    else
+    {
+        //Send Page not Found
+        e.Context.Response.StatusCode = 404;
+        WebServer.OutPutStream(e.Context.Response, &quot;Page not Found!&quot;);
+    }
 }
-else
-{
-//Return the WebApp
-e.Context.Response.ContentType = &quot;text/html&quot;;
-e.Context.Response.ContentLength64 = html.Length;
-WebServer.OutPutStream(e.Context.Response, html);
-}
-}
-else
-{
-//Send Page not Found
-e.Context.Response.StatusCode = 404;
-WebServer.OutPutStream(e.Context.Response, &quot;Page not Found!&quot;);
-}
-}</p>
-<p>Here we check if a web request is a Websocket request by checking the Upgrade header. If so we just handover the webrequest context to the webserver `_wsServer.AddWebSocket(e.Context)`. And the webserver will work its magic.
+
+</code></pre>
+<p>Here we check if a web request is a Websocket request by checking the Upgrade header. If so we just handover the webrequest context to the webserver <code>_wsServer.AddWebSocket(e.Context)</code>. And the webserver will work its magic.
 If the request is a normal web request we’ll return the WebApp. And that’s everything.</p>
 <blockquote>
-<p><em><strong>Note:</strong> If you want to track specific websocket users, you can use a custom headers that you read using the webserver. The request also contains the unique IPEndpoint that’s used by the webserver to keep track of the WebSocket clients.</em></p>
+<p><strong>Note:</strong> If you want to track specific websocket users, you can use a custom headers that you read using the webserver. The request also contains the unique IPEndpoint that’s used by the webserver to keep track of the WebSocket clients.*</p>
 </blockquote>
 <h3 id="run-the-solution">Run the solution</h3>
 <p>After you changed the wifi Ssid and Password in the code you’re ready fire everything up and see what happens. In the output you’ll find the url that you can use to connect to your device. Make sure you’re on the same network as the device or nothing will work.</p>
 <p>Open up a browser and connect to your device using the url or IP address of your device.
 In the app you can pick a color it’s very responsive. You can even drag over the color picker and the colors will change instantly. Now the background is actually the color that’s reported back to the server and that is broadcasted to all connected clients. So let’s make it interesting and open up some extra browser tabs. Now if you run these tabs side by side you can see all the colors are changing real-time. This is something you can’t achieve with normal HTTP requests.</p>
 <blockquote>
-<p><em><strong>Note:</strong> If you run the device without the debugger attached you can even get higher websocket througput speed.</em></p>
+<p><strong>Note:</strong> If you run the device without the debugger attached you can even get higher websocket througput speed.*</p>
 </blockquote>
 <h3 id="final-thoughts">Final thoughts</h3>
 <p>Experiencing this demo you can imagine of course how easy it would be to create an app that would constantly output sensor data for example for a wind meter.
