@@ -139,7 +139,7 @@
             <img class="img-fluid" src="/images/screenshot-2022-02-18-12-22-47.png" alt="image">
         </figure>
     </div>   
-                        <p>It’s been a little quite on my website lately. For good reasons. Last month’s I’ve been hard at work getting the nanoFramework library ready for release. In this blog that goes together with a video I made for the Microsoft Azure IoT show, I want to show how easy it is to get started with websockets on .NET nanoFramwork.</p>
+                        <p>It’s been a little quite on my website lately. For good reasons. Last month’s I’ve been hard at work getting the nanoFramework library ready for release. In This blog I want to show how easy it is to get started with websockets on .NET nanoFramwork. The blog goes together with a video I made for the Microsoft Azure IoT show.</p>
 <h3 id="what-are-websockets-and-why-should-you-care-about-running-websockets-on-tiny-iot-devices">What are websockets and why should you care about running websockets on tiny IoT devices?</h3>
 <p>Websockets is a web protocol that uses a normal HTTP request and strips away all the HTTP stuff so it has direct access to the underlying TCP Socket. This way the server client connections stays open and the server can continuously send information to the client and the other way around. This opposed to normal HTTP requests where a client asks for some information and gets a reply after which the connection is usually closed.
 Imagine you have a webpage or a WebApp that you constantly want to update with new information. Then you want to be using websockets. Websockets are used more often on the World Wide Web than you might think. Every time you open a page in your browser and a chat bot starts a live conversation. You know this webpage is using websockets.</p>
@@ -180,7 +180,7 @@ Before we start the server we attach an event handler to the <code>MessageReceiv
 <blockquote>
 <p><strong>Note:</strong> If you like you can of course also specify the client you want to send the information to. To monitor the connected clients you can use <code>WebSocketOpened</code> and <code>WebSocketClosed</code> event which will provide the <code>EndPoint</code> of the client that is used as a identifier. <code>Listclients</code> will provide you with a complete list of endpoints of connected clients.*</p>
 </blockquote>
-<p>Finally the code below shows how it is to handover a websocket request from the Webserver to the Websocket Server.</p>
+<p>Finally the code below shows how to handover a websocket request from the Webserver to the Websocket Server.</p>
 <pre><code class="language-csharp">
 //webserver receive message
 private static void WebServer_CommandReceived(object obj, WebServerEventArgs e)
@@ -224,8 +224,8 @@ In the app you can pick a color it’s very responsive. You can even drag over t
 <p><strong>Note:</strong> If you run the device without the debugger attached you can even get higher websocket througput speed.*</p>
 </blockquote>
 <h3 id="final-thoughts">Final thoughts</h3>
-<p>Experiencing this demo you can imagine of course how easy it would be to create an app that would constantly output sensor data for example for a wind meter.
-That’s how easy it and awesome it is to create a websocket server. Please let me know what you’re going to build using websockets. Have fun!</p>
+<p>Experiencing this demo you probably can imagine how easy it would be to create an app that would constantly output sensor data i.e. for a wind meter.
+I hope you learned how easy and awesome it is to create a websocket server. Please let me know what you’re going to build using websockets. Have fun!</p>
 
                     </div><!--//container-->
                 </article>
