@@ -6,9 +6,73 @@
 		<name>Feiko Gorter</name>
 	</author>
 	<link rel="self" href="https://www.feiko.io/" />
-	<rights>Copyright © 2022</rights>
-	<updated>2022-12-31T16:11:21Z</updated>
+	<rights>Copyright © 2023</rights>
+	<updated>2023-01-01T13:08:41Z</updated>
 	<subtitle>Feiko's personal site about everything IoT and Tech</subtitle>
+	<entry>
+		<id>http://www.feiko.io/posts/2022-12-31-the-future-of-ai-and-iot-exciting-technologies-to-watch-in-2023</id>
+		<title>The Future of AI and IoT: Exciting Technologies to Watch in 2023</title>
+		<link href="http://www.feiko.io/posts/2022-12-31-the-future-of-ai-and-iot-exciting-technologies-to-watch-in-2023" />
+		<link rel="enclosure" type="image" href="http://www.feiko.io/images/ai-coding.gif" />
+		<updated>2023-01-01T00:00:00Z</updated>
+		<content>&lt;p&gt;As we move into 2023, there are a few exciting technologies on the horizon that are worth keeping an eye on, particularly in the fields of artificial intelligence (AI) and the Internet of Things (IoT). These advancements have the potential to significantly change the way we interact with our web browsers and the IoT domain, as well as the way we think about AI.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;h3 id="webassembly-the-future-of-web-applications"&gt;WebAssembly: The Future of Web Applications&lt;/h3&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;One of the most notable technologies to watch out for is WebAssembly. This new standard allows developers to create web applications that behave much more like native apps, with fast performance and offline capabilities. This means that web applications will no longer be limited by the capabilities of JavaScript, and will be able to take advantage of the full power of the web browser.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;h3 id="webassembly-for-the-iot-domain"&gt;WebAssembly for the IoT Domain&lt;/h3&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;WebAssembly is also making its way into the IoT domain, with projects like Wasm3 (&lt;a href="https://github.com/wasm3/wasm3"&gt;https://github.com/wasm3/wasm3&lt;/a&gt;) and Wasm Micro runtime (&lt;a href="https://github.com/WebAssembly/wasm-micro-runtime"&gt;https://github.com/WebAssembly/wasm-micro-runtime&lt;/a&gt;) leading the charge. In 2023, I hope to see the development of lightweight, easy-to-use embedded programming languages for WebAssembly. These languages could make scripting more accessible, and their lightweight nature could help to reduce runtime download and memory usage. This is especially important for smaller applications, where full-blown WebAssembly languages like .NET Blazor can take too long to download and start up. In this case, platforms like .NET nanoFramework could fill the gap and provide a more suitable solution.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;h3 id="risc-v-open-hardware-for-the-iot-domain"&gt;Risc-V: Open Hardware for the IoT Domain&lt;/h3&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;Another technology that is gaining traction is Risc-V, an open hardware architecture that is particularly well-suited for the IoT domain. Many new Risc-V microcontrollers have the specs to support higher-end languages, even on small, embedded devices, while still being very power efficient. One example of this is the nanoFramework, which supports the Risc-V esp32-C3. This is particularly exciting for developers, as it opens up new possibilities for building more powerful and feature-rich IoT devices.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;h3 id="ai-the-most-disruptive-technology-of-all"&gt;AI: The Most Disruptive Technology of All?&lt;/h3&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;But perhaps the most disruptive technology on the horizon is the rapid progress being made in the field of AI. I have to confess that this blog post was completely written using OpenAI ChatGPT, with my outline as input. The fact that this is possible is mind-boggling to me, and I can't wait to see how this technology will be used in 2023. However, there is also a scary side to consider, as AI has the potential to disrupt many industries and potentially displace human workers.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;A﻿s an axample of what AI can do. I asked ChatGPT to create the following HTML widget completely from scratch&lt;/p&gt;
+&lt;div id="countdown" style="display: flex; flex-direction: column; align-items: center; background-color: #f9ca24; padding: 20px; border-radius: 10px;"&gt;
+  &lt;h3 style="color: white; margin: 0;"&gt;🎉 Countdown to 2024 🎉&lt;/h1&gt;
+  &lt;h4 style="color: white; margin: 0;"&gt;Created by AI!&lt;/h2&gt;
+  &lt;div id="clock" style="color: white; font-size: 3em; margin: 20px 0;"&gt;&lt;/div&gt;
+  &lt;div id="message" style="color: white; font-size: 2em; margin: 20px 0;"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+  const countDownDate = new Date("Jan 1, 2024 00:00:00").getTime();
+
+  const updateClock = setInterval(function() {
+    const now = new Date().getTime();
+    const distance = countDownDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("clock").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+    if (distance &lt; 0) {
+      clearInterval(updateClock);
+      document.getElementById("clock").innerHTML = "";
+      document.getElementById("message").innerHTML = "🎉 Happy new year! 🎉";
+    }
+  }, 1000);
+&lt;/script&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;h3 id="the-growth-of-the.net-nanoframework-community"&gt;The Growth of the .NET nanoFramework Community&lt;/h3&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;I'm also excited to see how the nanoFramework community continues to grow and gain more adoption in 2023. I hope more people will start developing for and with .NET nanoFramework, and that it will receive more funding and donations to support the implementation of features like generics and async/await. These advancements would make the platform even more powerful and useful for developers. It's worth noting that while generics have already been proven possible in nanoFramework, the challenge is in hooking it up to the Visual Studio debugger.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;h3 id="wishing-everyone-a-happy-2023"&gt;Wishing Everyone a Happy 2023&lt;/h3&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;As we move into the new year, it's worth taking a moment to consider the impact that these new technologies will have on our lives. While there is certainly a lot of excitement around what the future holds, it's also important to remember the potential risks and drawbacks that come with any new technology. That said, I'm hopeful that these advances will be used for good in the world, and I wish everyone a very happy 2023 filled with peace, tolerance, and love.&lt;/p&gt;
+</content>
+		<summary>Exciting technologies to watch in 2023: WebAssembly, Risc-V, and AI. Follow the growth of .NET nanoFramework and its impact on the IoT domain.</summary>
+	</entry>
 	<entry>
 		<id>http://www.feiko.io/posts/2022-02-18-websocket-server-for-net-nanoframework</id>
 		<title>WebSocket Server for .NET nanoFramework</title>
